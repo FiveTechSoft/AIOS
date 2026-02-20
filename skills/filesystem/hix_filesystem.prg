@@ -1,5 +1,5 @@
 function Aios_FileSystem( cAct, hP )
-   local hR := { "success" => .t. }, cPat, cPath, cFile, aRes := {}
+   local hR := { "success" => .t. }, cPat, cPath, cFile, aRes := {}, nLevel, nUp
    if cAct == 'filesystem_search'
    cPat := hb_HGetDef( hP, 'pattern', '*.*' ) ; cPath := hb_HGetDef( hP, 'path', 'c:\hix' )
    for each cFile in Directory( cPath + '\' + cPat )
@@ -27,19 +27,57 @@ function Aios_FileSystem( cAct, hP )
    hR["time"] := Time()
    hR["day_of_week"] := { "Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado" }[ DoW( Date() ) ]
    hR["full_iso"] := TToS( hb_DateTime() )
-   elseif cAct == 'filesystem_volume_control'
+   elseif cAct == 'os_hardware_control'
    cAct := hb_HGetDef( hP, 'action', '' )
-   if cAct == "off"
-   // Bajar 50 veces el volumen para forzar MUTE a 0% usando COM Shell.Application (Virtual-Key 174)
-   hb_Run( 'powershell -Command "$obj = new-object -com wscript.shell; for($i=0; $i -lt 50; $i++) { $obj.SendKeys([char]174) }"' )
-   hR['msg'] := "Volumen del sistema apagado exitosamente al 0%."
-   elseif cAct == "on"
-   // Subir 50 veces el volumen para forzar MAX a 100% usando COM Shell.Application (Virtual-Key 175)
-   hb_Run( 'powershell -Command "$obj = new-object -com wscript.shell; for($i=0; $i -lt 50; $i++) { $obj.SendKeys([char]175) }"' )
-   hR['msg'] := "Volumen del sistema encendido exitosamente al 100%."
+   nLevel := hb_HGetDef( hP, 'level', -1 )
+   cState := hb_HGetDef( hP, 'state', '' )
+
+   if cAct == "volume"
+   if nLevel >= 0 .and. nLevel <= 100
+   nUp := Int( Round( nLevel / 2, 0 ) )
+   hb_Run( 'powershell -Command "$obj = new-object -com wscript.shell; for($i=0; $i -lt 50; $i++) { $obj.SendKeys([char]174) }; for($i=0; $i -lt ' + AllTrim( Str( nUp ) ) + '; $i++) { $obj.SendKeys([char]175) }"' )
+   hR['msg'] := "Volumen del sistema ajustado al " + AllTrim( Str( nLevel ) ) + "%."
    else
-   hR['success'] := .f.
-   hR['error'] := "Acción inválida. Usa 'on' para encender o 'off' para apagar."
+   hR['success'] := .f. ; hR['error'] := "Nivel de volumen inválido. Debe ser de 0 a 100."
+   endif
+
+   elseif cAct == "brightness"
+   if nLevel >= 0 .and. nLevel <= 100
+   hb_Run( 'powershell -Command "(Get-WmiObject -Namespace root/WMI -Class WmiMonitorBrightnessMethods).WmiSetBrightness(1, ' + AllTrim( Str( nLevel ) ) + ')"' )
+   hR['msg'] := "Brillo de pantalla ajustado al " + AllTrim( Str( nLevel ) ) + "%."
+   else
+   hR['success'] := .f. ; hR['error'] := "Nivel de brillo inválido. Debe ser de 0 a 100."
+   endif
+
+   elseif cAct == "power"
+   if cState == "lock"
+   hb_Run( 'rundll32.exe user32.dll,LockWorkStation' )
+   hR['msg'] := "Windows Workstation locked."
+   elseif cState == "suspend" .or. cState == "sleep"
+   hb_Run( 'rundll32.exe powrprof.dll,SetSuspendState 0,1,0' )
+   hR['msg'] := "System suspended."
+   elseif cState == "reboot" .or. cState == "restart"
+   hb_Run( 'shutdown /r /t 0' )
+   hR['msg'] := "System reboot initiated."
+   elseif cState == "shutdown"
+   hb_Run( 'shutdown /s /t 0' )
+   hR['msg'] := "System shutdown initiated."
+   else
+   hR['success'] := .f. ; hR['error'] := "Estado de energía inválido (lock/suspend/reboot/shutdown)."
+   endif
+
+   elseif cAct == "battery"
+   hb_Run( 'WMIC Path Win32_Battery Get EstimatedChargeRemaining > c:\AIOS\bat_tmp.txt' )
+   if File( 'c:\AIOS\bat_tmp.txt' )
+   hR['msg'] := "Battery Report generated."
+   hR['content'] := MemoRead( 'c:\AIOS\bat_tmp.txt' )
+   FErase( 'c:\AIOS\bat_tmp.txt' )
+   else
+   hR['success'] := .f. ; hR['error'] := "Fallo leyendo métricas de batería WMI."
+   endif
+
+   else
+   hR['success'] := .f. ; hR['error'] := "OS Hardware Acción inválida."
    endif
    endif
 retu hR

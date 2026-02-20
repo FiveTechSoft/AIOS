@@ -124,6 +124,9 @@ function ExecuteReasoningLoop( cQuery, cModel, cHistory, cSystemPrompt )
             if ValType( hPart ) == "H" .and. hb_HHasKey( hPart, "functionCall" )
                hSkillResult := ExecuteAiosSkill( hPart["functionCall"]["name"], hPart["functionCall"]["args"] )
                aAdd( aResponseParts, { "functionResponse" => { "name" => hPart["functionCall"]["name"], "response" => hSkillResult } } )
+               if hb_HHasKey( hSkillResult, "js_eval" )
+                  hResult["js_eval"] := hSkillResult["js_eval"]
+               endif
             endif
          next
          aAdd( aMessages, { "role" => "function", "parts" => aResponseParts } )
@@ -138,6 +141,8 @@ function ExecuteReasoningLoop( cQuery, cModel, cHistory, cSystemPrompt )
          return hResult
       endif
    enddo
+
+   hResult['error'] := "Max retries reached without final answer"
 return hResult
 
 function GeminiCallFC( aMessages, aFunctions, cModel, cSystemPrompt )
@@ -216,6 +221,11 @@ function ParseAiosFCResponse( cJSON )
    if ValType( hResponse ) == "H" .and. hb_HHasKey( hResponse, "usageMetadata" )
       hResult["usageMetadata"] := hResponse["usageMetadata"]
    endif
+
+   if ValType( hResponse ) == "H" .and. hb_HHasKey( hResponse, "js_eval" )
+      hResult["js_eval"] := hResponse["js_eval"]
+   endif
+   
 retu hResult
 
 function BuildAiosFunctions()
@@ -233,7 +243,10 @@ function BuildAiosFunctions()
    aAdd( aFuncs, { "name" => "cron_add_reminder", "description" => "Schedule a reminder message.", "parameters" => { "type" => "object", "properties" => { "message" => { "type" => "string" }, "minutes" => { "type" => "number" }, "chat_id" => { "type" => "string" } }, "required" => {"message", "minutes"} } } )
    aAdd( aFuncs, { "name" => "web_search", "description" => "Search the internet for real-time information via Google Search.", "parameters" => { "type" => "object", "properties" => { "query" => { "type" => "string" } }, "required" => {"query"} } } )
    aAdd( aFuncs, { "name" => "web_search_wiki", "description" => "Search Wikipedia for encyclopedic or general concept information.", "parameters" => { "type" => "object", "properties" => { "query" => { "type" => "string" } }, "required" => {"query"} } } )
-   aAdd( aFuncs, { "name" => "filesystem_volume_control", "description" => "Control Windows master volume. Use 'on' for max volume, 'off' for mute.", "parameters" => { "type" => "object", "properties" => { "action" => { "type" => "string", "enum" => {"on", "off"} } }, "required" => {"action"} } } )
+   aAdd( aFuncs, { "name" => "os_hardware_control", "description" => "Control Windows OS hardware settings: volume (level 0-100), brightness (level 0-100), power (state: lock, suspend, restart, shutdown), or battery (state: status).", "parameters" => { "type" => "object", "properties" => { "action" => { "type" => "string", "enum" => {"volume", "brightness", "power", "battery"}, "description" => "Hardware component to control" }, "level" => { "type" => "number", "description" => "Percentage from 0 to 100 (for volume/brightness)" }, "state" => { "type" => "string", "description" => "Required for power (lock/suspend/reboot/shutdown) or battery (status)" } }, "required" => {"action"} } } )
+   aAdd( aFuncs, { "name" => "frontend_set_interval", "description" => "Instruct the user's chat browser to automatically send a message repeatedly every X seconds. Allows recurring jobs in the background.", "parameters" => { "type" => "object", "properties" => { "message" => { "type" => "string", "description" => "The exact message the browser should auto-send to you." }, "seconds" => { "type" => "number", "description" => "Interval delay in seconds." } }, "required" => {"message", "seconds"} } } )
+   aAdd( aFuncs, { "name" => "frontend_clear_intervals", "description" => "Stop all background recurrent tasks running on the user's browser.", "parameters" => { "type" => "object", "properties" => {=>}, "required" => {} } } )
+   aAdd( aFuncs, { "name" => "frontend_execute_js", "description" => "Execute raw Javascript on the user's chat browser to manipulate the DOM (change background color, trigger alerts, etc).", "parameters" => { "type" => "object", "properties" => { "javascript" => { "type" => "string", "description" => "A valid single or multi-line Javascript code block." } }, "required" => {"javascript"} } } )
 retu aFuncs
 
 function ExecuteAiosSkill( cName, hArgs )
@@ -247,12 +260,15 @@ function ExecuteAiosSkill( cName, hArgs )
       case cName == 'config_get' ; hRes := Aios_Config( 'config_get', hArgs )
       case cName == 'memory_summarize' ; hRes := Aios_MemorySummarize( hArgs )
       case cName == 'filesystem_get_datetime' ; hRes := Aios_FileSystem( cName, hArgs )
-      case cName == 'filesystem_volume_control' ; hRes := Aios_FileSystem( cName, hArgs )
+      case cName == 'os_hardware_control' ; hRes := Aios_FileSystem( cName, hArgs )
       case cName == 'identity_update' ; hRes := Aios_PersonaUpdate( 'identity', hArgs )
       case cName == 'soul_update' ; hRes := Aios_PersonaUpdate( 'soul', hArgs )
       case cName == 'cron_add_reminder' ; hRes := Aios_Cron( cName, hArgs )
       case cName == 'web_search' ; hRes := Aios_WebSearch( hArgs )
       case cName == 'web_search_wiki' ; hRes := Aios_WebSearchWiki( hArgs )
+      case cName == 'frontend_set_interval' ; hRes := Aios_Cron( cName, hArgs )
+      case cName == 'frontend_clear_intervals' ; hRes := Aios_Cron( cName, hArgs )
+      case cName == 'frontend_execute_js' ; hRes := Aios_Cron( cName, hArgs )
    endcase
 retu hRes
 

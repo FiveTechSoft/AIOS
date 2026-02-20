@@ -188,3 +188,601 @@ Please retry in 18.71640094s.
             "text": "¡Hola, Anto querido! He recibido tu prueba correctamente. Todo está funcionando a la perfección por aquí. ¿En qué te puedo ayudar hoy? Estoy lista y a tu disposición para lo que necesites. 😊",
             "thoughtSignature": "EsoJCscJAb4+9vvIIT5Yojs9SbECEAtyUiMaPuaKlXgr6Cd0p7xLJUjkxdnk6ijCiPW+voVrGSoG6Wn7xraiK6lzGNdmMHMeyndLaBJ++Dtn7ZZ0YDamWe2j4LrnlEY5MG62P7kFK6U9Hh18KPYCLtahzBI+kcpkavTC0Bf ( len: 2429 )
 [20/02/26 21:29:58] v1.0: REQ: estás ? | PromptLen: 788
+[20/02/26 21:30:06] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "¡Hola, Anto! Sí, aquí estoy. Lista y con muchas ganas de ayudarte en todo lo que necesites. ¿En qué te puedo apoyar el día de hoy? Siempre es un placer escucharte. ✨",
+            "thoughtSignature": "EsEKCr4KAb4+9vtcPZFqV4AYEXXXs2eEtb5N79hB7KJKRK5wwZRsh1QhBi9dJRquV+QhqOzXbAiZ9jGJzdyWYhENkS5hQNe4U1ZjIffMnzCBKHAoTGWOghtXSvehFrIGtq4uSN5ePbFXaujdvvRvZ+ae1PTOoyjn07Cm/++ypG3+atYO0sCpX2Lz8HyYGbX4R4 ( len: 2562 )
+[20/02/26 21:30:12] v1.0: REQ: volumen off | PromptLen: 788
+[20/02/26 21:30:16] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "name": "filesystem_volume_control",
+              "args": {
+                "action": "off"
+              }
+            },
+            "thoughtSignature": "Er0ECroEAb4+9vvzHnaZREi+tRuagGju8WgkuEcEPDhN5BB0IZC9l6LoHS65PT1HAUBh38UySX5LcZ+zC6XXuTzpwCRMbshnSxagl77MY+YPvH4Yx96DegxzlL95CDHGHeu1Nttchl7TU9HBq9oPbCTuZY4syMq9z3cpy3xSD0EBg/MSDDw9TbEzIXDMJCWimn70E5zUOqPEId5/MQnYCJFjFzpgGt+ ( len: 1561 )
+[20/02/26 21:30:22] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "¡Listo, Anto! He apagado el volumen del sistema y ahora está en completo silencio, justo como me pediste. ¿Hay algo más en lo que pueda ayudarte? 🌸",
+            "thoughtSignature": "Eu4GCusGAb4+9vsEj/IgsvTsuaTrUT7oPJih4ppbue8fV4ZfmonodtZXLxicmRM4nKJcI8b9Wq6IlogG3jzEKbXQQ8sqTqlKK8Mx5O66SOPyxPugAgnU1xtwy4Cm7O2LJejdjS0zc9ey+pEmDI48rgSxAPw0LrK7KZAfIJYTXb4AqP6VIyE/i099rusGip6EA0HoWQXtF+N9JIRePna+j ( len: 1921 )
+[20/02/26 21:30:25] v1.0: REQ: volumen on | PromptLen: 788
+[20/02/26 21:30:29] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "name": "filesystem_volume_control",
+              "args": {
+                "action": "on"
+              }
+            },
+            "thoughtSignature": "Er4ECrsEAb4+9vsRKvpHWWj+GBShfEG1R/KyVVwlttkgVfdJfceep9U4ikLE+7Z6mbDigmLJTNP+tjgwroQyxTXGCr5E6aC6xiJv0vdofzW7SVeaRFFiapS2oUcqywxmG/0UDxG4DN2z+2WAkRogHFWvTRDntKYLDZKZplNp/+T7gk4GVRCHWnicFk4kTMRtPFZ//MCr7ZPDb7ot8hLAGKi8GFUC3r53 ( len: 1564 )
+[20/02/26 21:30:33] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "¡Perfecto, Anto! Ya he vuelto a encender el volumen al máximo. Todo debería sonar fuerte y claro ahora. 😊 ¿Te ayudo con alguna otra cosita? ✨"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 1047,
+    "candidatesTokenCount": 38,
+    "totalTokenCount": 1085,
+    "promptTokensDetails" ( len: 674 )
+[20/02/26 21:30:38] v1.0: REQ: volumen al 50  | PromptLen: 788
+[20/02/26 21:30:43] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "¡Ay, Anto querido! Me encantaría poder poner el volumen exactamente al 50% para ti, pero por el momento mis herramientas solo me permiten silenciarlo por completo (\"off\") o subirlo al máximo (\"on\"). \n\n¿Te gustaría que lo deje encendido al máximo, o prefieres que lo mantenga en silencio? Siempre estoy aquí para aprender y mejorar para ti. 💖🌸",
+            "thoughtSignature": "EvwGCv ( len: 2148 )
+[20/02/26 21:32:28] v1.0: REQ: test | PromptLen: 788
+[20/02/26 21:32:34] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "¡Hola Anto! Prueba recibida con éxito. Todo mi sistema está funcionando a la perfección. ¿En qué te puedo ayudar hoy, cariño? ¡Estoy aquí y lista para apoyarte en lo que necesites!",
+            "thoughtSignature": "EugKCuUKAb4+9vsXLyRaeCjvhkQ+hqAMj7N3LbIwqcNm/sGGGizNaDlKBoDxQ1ODrYU92JWGW5PGe8Pac6i8qoXNPk/WQ64Qp0zRFfIRTTFOKc4mHGnxVQ4GNO0YnUYruPwjp6U4yAgt4yleAtqBfgbDsPg90oticHM3EVcmtclOIxeof1 ( len: 2630 )
+[20/02/26 21:32:46] v1.0: REQ: volumen al 30  | PromptLen: 788
+[20/02/26 21:32:51] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "name": "filesystem_volume_control",
+              "args": {
+                "level": 30
+              }
+            },
+            "thoughtSignature": "EtgECtUEAb4+9vta85l3ZSQIV5525fVi/qNoEBW+FWFbnZetmleAXKy32r05aZ3Br1PMfOObnhIJjqHokFvcJr1rtDeWpLJlhf7oAMvhtD0cCLFkY3hKs2/MCXjRtSUXG0/l41SuNszYvcPzoGfReHOIEaXQICyBUM9wzPK0uzprKHWr8Ie/3eKyo2yYQBOxMujU2l0wz0QB7ad9wB6xHJkdMuJ9Xz0VKLp ( len: 1595 )
+[20/02/26 21:32:55] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "¡Listo, Anto! He ajustado el volumen al 30%, justo como querías. Ahora el sonido será más suave y agradable. ¿Te puedo ayudar con algo más, querido Anto? 🌸"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 1092,
+    "candidatesTokenCount": 44,
+    "totalTokenCount": 1136,
+    "prompt ( len: 688 )
+[20/02/26 21:33:02] v1.0: REQ: volumen al 70  | PromptLen: 788
+[20/02/26 21:33:10] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "name": "filesystem_volume_control",
+              "args": {
+                "level": 70
+              }
+            },
+            "thoughtSignature": "EuIECt8EAb4+9vvzvCfULg3AofOrN+CkcGDWlz2rcsay8VtaxwUrKF7NuSAgFLciIlJmwUxHjkCUK6zwCNy82/72TZH+rgFTdjyI4lr9QaDIE4/TkjrDP4o1pQ/GwgQ9P1mLdx9UGpzW9VrlX9xZnLxw09JFtE2lyNq8/r9mR/ltVHgHWe/HhylakbkIyaiBmCYOFm7fbKxJqCJO0vXKCWa7oFeYFjYY1K+ ( len: 1611 )
+[20/02/26 21:33:14] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "¡Listo, Anto! He ajustado el volumen al 70%. Espero que así esté a un nivel perfecto para ti. ✨ ¿Puedo hacer algo más por ti? 😊"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 1092,
+    "candidatesTokenCount": 38,
+    "totalTokenCount": 1130,
+    "promptTokensDetails": [
+      {
+  ( len: 661 )
+[20/02/26 21:33:20] v1.0: REQ: volumen al 25  | PromptLen: 788
+[20/02/26 21:33:24] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "name": "filesystem_volume_control",
+              "args": {
+                "level": 25
+              }
+            },
+            "thoughtSignature": "EvoECvcEAb4+9vsWozPNivEaexC0dqnVfklTeEDiKqCVXjlyAL8eSesh99lgvuTM3Pt0OS2rM/XxDft62rmGRoePG/6Gygwmf2rM6AosiLMDQU+aRLh5GNEEHtpa+xe05qOFAVM2V8z9OLP5JKbg1p58WYHUadr3dXKg/kIJOilMd7B4HFo3lzED32zupIAVmSnr8zhW8/5oR1+wyDAy7W0MppD6F4pGP/n ( len: 1643 )
+[20/02/26 21:33:33] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "¡Listo, Anto! He ajustado el volumen al 25% con mucho gusto. Ahora suena mucho más suave y tranquilo. 🌸 ¿Hay algo más en lo que pueda serte útil? Siempre es una alegría ayudarte. ✨"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 1254,
+    "candidatesTokenCount": 49,
+    "totalTok ( len: 715 )
+[20/02/26 21:33:53] v1.0: REQ: aumenta el brillo | PromptLen: 788
+[20/02/26 21:34:00] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "name": "os_hardware_control",
+              "args": {
+                "level": 100,
+                "action": "brightness"
+              }
+            },
+            "thoughtSignature": "Es8ICswIAb4+9vuTmFvuJ2vHetkqiW3Z1UiU1aF41a6mSN997D0G02ZkNqZEbWnS73ykyk4EKoyJDjDz+QSPD1D2H7jq3ix/IQVpLywfMIki2JIy5ONOxYHO6EehPoIWo0KKm17u2r8nLcBJngJcRls8L1DNqyvXa1fufIVYW1q93boc0QI0LWuEPst31NAF ( len: 2302 )
+[20/02/26 21:34:03] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "¡Listo, Anto! He aumentado el brillo de la pantalla al máximo (100%). Espero que ahora todo se vea mucho mejor y más claro. ✨ ¿Te puedo ayudar con algo más? 😊"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 1182,
+    "candidatesTokenCount": 42,
+    "totalTokenCount": 1224,
+    "pr ( len: 692 )
+[20/02/26 21:34:13] v1.0: REQ: brillo al 20  | PromptLen: 788
+[20/02/26 21:34:18] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "name": "os_hardware_control",
+              "args": {
+                "level": 20,
+                "action": "brightness"
+              }
+            },
+            "thoughtSignature": "Eu4DCusDAb4+9vuGeYeWWHPPlxTn4uksPjYyFK1zrbwa2CODWxw+E81qSFMlrQeIAhbuAS6us7FN1dfmSwaH2w7uezAaW9H8DDR6fqcET3j2fUJS9zJ8TIixpEQJerAKfFqpzeOfNhV9KXbzBJsuiwZ7HnDakdE72RXMqPGRRctya3jfDquR4LCpG8rQkms8K ( len: 1489 )
+[20/02/26 21:34:25] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "¡Listo, Anto! He ajustado el brillo de la pantalla al 20%, para que esté más suave a la vista. 💖 ¿Necesitas que haga algo más por ti? Siempre estoy aquí para cuidarte. ✨"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 1324,
+    "candidatesTokenCount": 48,
+    "totalTokenCount": 1 ( len: 704 )
+[20/02/26 21:34:44] v1.0: REQ: que otras peticiones similares podemos hacerle a Windows ? | PromptLen: 788
+[20/02/26 21:34:47] v1.0: REQ: test | PromptLen: 788
+[20/02/26 21:34:53] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "¡Hola! Todo funciona perfectamente por aquí. Te escucho fuerte y claro. ¿En qué te puedo ayudar hoy? ✨",
+            "thoughtSignature": "EtwFCtkFAb4+9vuayv+Rj2WVZMsGKRcPgtzslM0HAKVt2jxleUKSQTtG/KSzIrizRiY3NwgIKxfGFOK13exSUbQ8oI/CM58gMVxK7s/IgdkbI6gYGgLMpJ5nKElM0pOwRfirFu4GE1nVH8Bz1TG75FF3VKLpuOIhjSEZbqYglOINv0Q2//FZ85RVGopgdcR5vYHnOPYh3l0BeIaT/gb3v//uFvSXrnF1h0oDTMkKKiCe5y8Mfc6ZDkqvjSyg3IPmTeA ( len: 1679 )
+[20/02/26 21:34:56] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "¡Hola, Anto! Además de apagar o encender el volumen, puedo ayudarte a controlar varias cositas más de tu sistema Windows para hacerte la vida más fácil. Aquí tienes lo que puedo hacer por ti:\n\n*   🎚️ **Ajustar el Brillo de la pantalla:** Puedes pedirme que lo ponga en un porcentaje específico (del 0 al 100%). Por ejemplo: *\"Pon el brillo al 50%\"* o *\"Sube el brillo al máximo\"*.\n*  ( len: 5373 )
+[20/02/26 21:35:14] v1.0: REQ: dame mas opciones | PromptLen: 788
+[20/02/26 21:35:28] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "¡Claro que sí, Anto! 🌸 Como tu asistente, tengo muchas habilidades preparadas para hacerte la vida más fácil y ayudarte en tu día a día. \n\nEn cuanto al **control de tu equipo**, también puedo hacer todo esto:\n*   ☀️ **Brillo de pantalla:** Puedo ajustar el brillo al nivel que prefieras (por ejemplo, me puedes decir \"pon el brillo al 50%\").\n*   🔊 **Volumen exacto:** Además de e ( len: 6580 )
+[20/02/26 21:36:23] v1.0: REQ: puedes buscar en la wikipedia ? | PromptLen: 788
+[20/02/26 21:36:28] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "¡Sí, claro que sí, Anto! 🌸 Tengo acceso a Wikipedia y puedo buscar cualquier concepto o información que necesites. \n\n¿Qué te gustaría que busque para ti hoy? Dime el tema y con mucho gusto te traigo la información. ✨",
+            "thoughtSignature": "EpoFCpcFAb4+9vuHuRqEE02dvqCkQTiI9bp1NNGAsEdtUAmZoF4+CGg4B9YltKsOCSCiyO9WHvjhad0GECoC2vp7W4VYOKMc4Ojw5kPT/6Fs1ipZlVVuFTQEYMOpL7Iqy2Hn5isz ( len: 1714 )
+[20/02/26 21:36:52] v1.0: REQ: que dice la wikipedia acerca del proyecto Harbour, quien lo fundó ? | PromptLen: 788
+[20/02/26 21:36:58] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "name": "web_search_wiki",
+              "args": {
+                "query": "Harbour (programming language)"
+              }
+            },
+            "thoughtSignature": "EvQHCvEHAb4+9vuMbn3iQjcVGXi6E17N17VkV2aquNWRwIYeCcNomHmUsoAOzPN5TrHntUFUXvl6m0OrN/E8TJoZ8TTJHDSS54HVFTekU/CIw+zW6Nbt6HMkOL1YDrHwUz3+gnll8Cm2AejR3TaUxYaqUu+RIA1TNRM/LFUgCSQD3kCD1wQa/BSpA7GgjGXcIrWSo3E2UuR3pv4 ( len: 2167 )
+[20/02/26 21:36:58] v1.0: WebSearchWiki query execution: Harbour (programming language) ( Results length: 591 )
+[20/02/26 21:37:03] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "name": "web_search_wiki",
+              "args": {
+                "query": "Harbour (lenguaje de programación)"
+              }
+            },
+            "thoughtSignature": "ErwGCrkGAb4+9vsViXyzLi1I9flb4+RT5/AmEAxATP803zFAySFOQe6xld+wjqll+jn45Jz/LhCiGMfs5wjt//ztzW7h6bHrK7mifPLkpQ/mF+4GJxmB94BSo4vGbP/+ANoFwozijeNydhzqjVFl+/7VZiVGzYFfhJP+yW1FmN6li8AsHF/c3b8fJwbYz8FOFG/pDZ0Oa4 ( len: 2157 )
+[20/02/26 21:37:03] v1.0: WebSearchWiki query execution: Harbour (lenguaje de programación) ( Results length: 0 )
+[20/02/26 21:37:04] v1.0: WebSearch ( Google ) query execution: Proyecto Harbour lenguaje de programacion fundador Wikipedia ( Results length: 938 )
+[20/02/26 21:37:11] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "¡Hola de nuevo, Anto! He buscado la información sobre el Proyecto Harbour y te cuento lo que encontré:\n\nHarbour es un compilador de código abierto del lenguaje de programación Clipper (una variante de xBase), que permite que las aplicaciones creadas con este lenguaje funcionen en múltiples plataformas modernas. \n\nY sobre quién lo fundó... ¡Adivina! El proyecto fue iniciado en 1999 nada m ( len: 3551 )
+[20/02/26 21:38:18] v1.0: REQ: sonido off | PromptLen: 788
+[20/02/26 21:38:23] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "name": "os_hardware_control",
+              "args": {
+                "level": 0,
+                "action": "volume"
+              }
+            },
+            "thoughtSignature": "EucECuQEAb4+9vuOgfp6h1pYLW4hvj8VnmrbyM9eCWjvtZQkp36C7Wn/jEsD6HheGnXeWMciDiyQhUgbtiPS2cXigGbk6ozpx2boDk251Lljin07MIILuBuade4bcP+jtKJs1jI5JUHv5nMOVZ1NW9gych+mxhamDQp6B+ITLCJADxdkUmL3OqZWnE+9HryBLZSgfA ( len: 1644 )
+[20/02/26 21:38:27] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "¡Hecho, Anto! He apagado el sonido, así que tu sistema está ahora en absoluto silencio. Ya no te interrumpirá ningún ruidito. 🌸 ¿Necesitas que ajuste algo más? ✨"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 1358,
+    "candidatesTokenCount": 44,
+    "totalTokenCount": 1402,
+   ( len: 697 )
+[20/02/26 21:38:30] v1.0: REQ: sonido 20  | PromptLen: 788
+[20/02/26 21:38:35] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "name": "os_hardware_control",
+              "args": {
+                "level": 20,
+                "action": "volume"
+              }
+            },
+            "thoughtSignature": "EucECuQEAb4+9vtj08TSgJykbff4mVEyiUBRZ8YxaD/xpmnr8XAOuqje6tVw1uVp+8D6rM+qCOz2L8Jl/sFIJl1QxlZpIl2ceq+9IL2QXZreDcLg/ciaeTcFbWu8UrXwNdRksxkNSQKveiiUUCnxQrMhFcA/kxWl4FgOtQ47g/bvfMT+jgQNLKGjFfNAxuL6ZgS7b ( len: 1645 )
+[20/02/26 21:38:39] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "¡Listo, Anto! He ajustado el sonido al 20%, un nivel suavecito y agradable. ¿Todo bien con eso o necesitas algún otro ajuste? Estoy aquí para ti. 💖"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 1355,
+    "candidatesTokenCount": 42,
+    "totalTokenCount": 1397,
+    "promptTokensDeta ( len: 678 )
+[20/02/26 21:39:33] v1.0: REQ: puedes escribir algo aqui dentro de 30 segundos ? | PromptLen: 788
+[20/02/26 21:39:46] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "name": "cron_add_reminder",
+              "args": {
+                "minutes": 0.5,
+                "message": "¡Hola, Anto! Ya pasaron los 30 segundos que me pediste. ¡Aquí estoy, siempre atenta a ti! 💕"
+              }
+            },
+            "thoughtSignature": "EowUCokUAb4+9vutWuFnq9QVUfPcSLt/V4zAD0qt6GimdU2/m1cgsdEx9WiFI3je6HOZRtkaUxLBmYwyHBZucgOs3SwtHcx+TR/DNTr2 ( len: 4350 )
+[20/02/26 21:39:48] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "¡Listo, Anto querido! He programado un mensajito para ti. En 30 segunditos te escribo de nuevo. ¡No me voy a ningún lado! ✨💕"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 1233,
+    "candidatesTokenCount": 40,
+    "totalTokenCount": 1273,
+    "promptTokensDetails": [
+      {
+       ( len: 656 )
+[20/02/26 21:40:23] v1.0: REQ: cada 15 segundos dime que hora es | PromptLen: 788
+[20/02/26 21:40:39] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "¡Ay, mi querido Anto! 🌸 Me encantaría hacer eso por ti, pero te cuento un pequeño detalle técnico: mi sistema de recordatorios actual solo me permite programar avisos en intervalos de minutos y como eventos únicos (no repetitivos). 🥺\n\nNo puedo configurarlo para que te avise cada 15 segunditos de forma automática, pero si gustas, puedo decirte la hora exacta en este mismo instante o prog ( len: 5616 )
+[20/02/26 21:44:27] v1.0: REQ: dime la hora cada 30 segundos | PromptLen: 788
+[20/02/26 21:44:44] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "Mi querido Anto, me encantaría poder hacer eso por ti, pero mi sistema de recordatorios está diseñado para programar avisos en intervalos de minutos enteros (1 minuto, 5 minutos, etc.) y como un aviso puntual, no de forma recurrente cada tantos segundos. 🥺\n\n¿Te gustaría que te avise de la hora dentro de un par de minutos o que te programe algún recordatorio especial? ¡Estaré encantada de ( len: 5545 )
+[20/02/26 21:45:03] v1.0: REQ: avisame dentro de un minuto | PromptLen: 788
+[20/02/26 21:45:12] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "name": "cron_add_reminder",
+              "args": {
+                "minutes": 1,
+                "message": "¡Hola Anto! 💕 Ya pasó un minutito, aquí estoy avisándote como me pediste. ¿En qué más te puedo ayudar?"
+              }
+            },
+            "thoughtSignature": "EooOCocOAb4+9vuuxUlUifUUwcT6/zMqjnz/pjXIdWPA6JuUQ2DI8gfsrmHPON4Rtd7vwztS9kSym64bTvr8r8/adaw ( len: 3335 )
+[20/02/26 21:45:15] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "¡Listo, Anto! He programado el recordatorio. En un minutito te avisaré con mucho cariño. 💕 ¿Necesitas algo más mientras esperamos? ✨"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 1222,
+    "candidatesTokenCount": 34,
+    "totalTokenCount": 1256,
+    "promptTokensDetails": [
+     ( len: 666 )
+[20/02/26 21:46:16] v1.0: REQ: cambia el color de fondo de este chat a azul | PromptLen: 788
+[20/02/26 21:46:23] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "¡Ay, mi querido Anto! Me encantaría poder hacer eso por ti para que veas el chat de tu color favorito, pero lamentablemente no tengo acceso para cambiar la apariencia o los colores de nuestra ventana de chat. 🥺 \n\nMi control llega hasta el sistema y los archivos, pero la interfaz gráfica se escapa de mis manitas. ¿Hay alguna otra cosita técnica o del sistema en la que te pueda ayudar hoy? Si ( len: 2448 )
+[20/02/26 21:48:12] v1.0: REQ: test | PromptLen: 788
+[20/02/26 21:48:19] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "¡Hola Anto! Prueba recibida con éxito. Todo está funcionando a la perfección. \n\nEstoy aquí, lista y llena de energía positiva para ayudarte en tus proyectos con Harbour y en cualquier otra cosa que necesites. ¿En qué te puedo apoyar hoy? ✨",
+            "thoughtSignature": "EvoICvcIAb4+9vt+/9ylLTPN5+4LWs3IVw10wyv3jKpMMHQHuw0aSofuyB81pAFilL38tMujliMp1TSKAm4M4/7sIzDCPGLSkffV+quGXbecjsRXQqPw ( len: 2374 )
+[20/02/26 21:49:13] v1.0: REQ: cambia el color de fondo de este chat a azul | PromptLen: 788
+[20/02/26 21:49:21] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "name": "frontend_execute_js",
+              "args": {
+                "javascript": "document.body.style.backgroundColor = 'blue';"
+              }
+            },
+            "thoughtSignature": "EpIKCo8KAb4+9vth7lkjjEK5DGB8FPRjfCVPyLPs+wA6u7Q9HkNxHA+fYNTls8JmcfnlA2OXh389Z5+AarCHwzGtWVEW4z28VQYQGn/ZiRPOSzArg+dP036x5BtT/PqojegN+hKcUI78elHiu0gaxqNPCPiCVi9hiMASvoeWuO3Zo8kjQBMODjy ( len: 2571 )
+[20/02/26 21:49:28] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "¡Hecho, Anto! He cambiado el color de fondo a un azul precioso. Espero que te guste cómo se ve. Si quieres algún otro color o cualquier otra cosa, ¡solo dímelo! 💙✨"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 1776,
+    "candidatesTokenCount": 46,
+    "totalTokenCount": 1822,
+   ( len: 697 )
+[20/02/26 21:49:39] v1.0: REQ: avisame dentro de un minuto | PromptLen: 788
+[20/02/26 21:49:46] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "name": "cron_add_reminder",
+              "args": {
+                "minutes": 1,
+                "message": "¡Anto, cariño! Ya pasó el minuto que me pediste. Aquí estoy para ti. 💖"
+              }
+            },
+            "thoughtSignature": "EqAKCp0KAb4+9vtVEY2Z2Vtv37jOmEJTsIM4oN9DbeXI6a8jG/GTOQdAamjq3swyF6Cgngvih7BXZ5ZnaKAm5lvRNf09QW3wRGuospBu/DB6uffvFd+aafOVmvFdgi ( len: 2648 )
+[20/02/26 21:49:49] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "¡Hecho, Anto! En un minutito exacto te enviaré un recordatorio para avisarte. Aquí sigo atenta a lo que necesites, ¡un abrazo enorme! 💖"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 1772,
+    "candidatesTokenCount": 41,
+    "totalTokenCount": 1813,
+    "promptTokensDetails": [
+     ( len: 666 )
+[20/02/26 21:51:44] v1.0: REQ: cambia el color de fondo a azul | PromptLen: 788
+[20/02/26 21:51:51] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "name": "frontend_execute_js",
+              "args": {
+                "javascript": "document.body.style.backgroundColor = 'blue';"
+              }
+            },
+            "thoughtSignature": "EtUICtIIAb4+9vvRrM4kyaIPkIXi1VNI8GMrPSF6fvkYIIQjPAb8/9Pw3fzYQ0vsnedl+N0LW8XLSxlAWZqWoKarMEZjUyky42RUTpBcHv8M+XsvBtDrSuL2G7vBd/yIAQ7jutjc5s/pWodhnI1elQUx5BofTYp/E8wmiUreR38UoPG+o8IAGPG ( len: 2319 )
+[20/02/26 21:51:54] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "¡He cambiado el color de fondo a azul, Anto! ¿Te gusta cómo se ve o prefieres algún otro tono?",
+            "thoughtSignature": "EooBCocBAb4+9vvUtZ8RXXisegpIY9AMHHRYb8L452UWJoviiG+Bl+Z/+2p+5mH4DuUOrZKzGjoW/4H/DcmY6kqrT/nWwo5DZCUMyNsXeOWPomw0ANUd6SdrYuKQW7+XiixTto+orNHs6369kbABHDANZjpRGBIXFrAdV/gWguAHTZzhAYepTNRFKgNT"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": " ( len: 876 )
