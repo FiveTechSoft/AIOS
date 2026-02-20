@@ -16,3 +16,5 @@
 *   **Chat HTML UI Formatting**: Fixed the UI line-break rendering bug in `chat.prg` by implementing a split/join strategy to reliably convert textual `\n` carriage returns into HTML `<br>` tags alongside setting `white-space: pre-wrap`.
 *   **AI Persona**: Reviewed and activated the AI persona skill (`IDENTITY.md`, `SOUL.md`), confirming automatic integration with AI responses.
 *   **Dual Web Search**: Refactored the `web_search` skill to support dual searching due to DuckDuckGo CAPTCHA blocks. Integrated Wikipedia JSON extraction for encyclopedic searches (`websearch_wiki.prg`), and Google Serper API extraction via `serper_config.json` for live web searches (`websearch.prg`).
+*   **Token Pricing and Counting**: Included logic in `aios.prg` and `chat.prg` to visually track the execution cost and number of tokens consumed by standard API usage. Resolved Harbour string syntax parsing errors inside Javascript templates.
+*   **Version Control**: Reset ultra-stable version tracking from 1.7 back to standard 1.0 release branch across all core scripts.
