@@ -1,6 +1,6 @@
-# AIOS (OpenClaw) - Advanced AI Operating System
+# AIOS - AI Operating System
 
-AIOS (also known as OpenClaw) is an experimental and highly robust AI Assistant platform natively built in **Harbour** and designed to securely interface with the **Google Gemini API**. Utilizing Gemini's Function Calling (FC) capabilities, AIOS transcends a simple chat interface by dynamically executing local system "Skills" based on user intent.
+AIOS is an experimental and highly robust AI Assistant platform natively built in **Harbour** and designed to securely interface with the **Google Gemini API**. Utilizing Gemini's Function Calling (FC) capabilities, AIOS transcends a simple chat interface by dynamically executing local system "Skills" based on user intent.
 
 ## 🚀 Key Features
 

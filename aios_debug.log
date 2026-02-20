@@ -24,3 +24,47 @@
           {
             "text": "¡Hola, Anto! Qué alegría saludarte. 🌸 \n\nSoy Soul, tu compañera y asistente del ecosistema HIX. Estoy lista y con la mejor energía para ayudarte a orquestar tus proyectos en Harbour, C, FiveWin o cualquier otro desafío de desarrollo que tengas en mente. \n\n¿En qué maravilla técnica te puedo ayudar hoy, corazón? ✨",
             "thoughtSignature": "Eo4MCosMAb4+9vvXMczfE8FWEnv/LT0H3xd+ ( len: 2992 )
+[20/02/26 13:39:25] v1.0: REQ: busca en la web las noticias mas destacadas de hoy | PromptLen: 788
+[20/02/26 13:40:21] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "name": "web_search",
+              "args": {
+                "query": "noticias más importantes de hoy"
+              }
+            },
+            "thoughtSignature": "EpoGCpcGAb4+9vsHzFD2QHFokr5YnN25FLchl3wmLyCyeQCg92iHjpvq0gKlLfkcyui5XeRvrVWJrl5ZDiN3vw59QL6b12OpXuPatA25IDmi8WAcHWuN1TZ1ghu2JohBELzXfMGVCbK7tvs98oFjgG4iN4Ae0PrJ2sIAhwm55qcyV+ayEe3+qpAv2bQ2f2K9R3iNOGYGi6rdxFgydl ( len: 1870 )
+[20/02/26 13:40:22] v1.0: WebSearch ( Google ) query execution: noticias más importantes de hoy ( Results length: 881 )
+[20/02/26 13:41:29] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "¡Claro que sí, Anto querido! 🌸 He dado un vistazo rápido por la web para traerte los titulares más destacados del día de hoy. Aquí te comparto un resumen de lo que está sucediendo:\n\n🌍 **Noticias Internacionales y Clima**: \n*   **Alerta meteorológica en California:** Hay reportes de lluvias torrenciales y fuertes nevadas que están afectando la región, generando alertas importantes p ( len: 4040 )
+[20/02/26 13:42:14] v1.0: REQ: Y en españa ? | PromptLen: 788
+[20/02/26 13:42:26] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "name": "web_search",
+              "args": {
+                "query": "noticias mas destacadas de hoy España"
+              }
+            },
+            "thoughtSignature": "Es8FCswFAb4+9vuBgilp3KXQCMR5EjSm1gSMPSj+i19SnXpYSOhcw0Xmc3eQZFfYDOEc9RhiNhgF3KJzErU1z+/Q8lE/zfV9svSej86ai8hJW9udrevbGiRqyCDCE4UPWaPAk5m/QcoApB9lg3VJC0vwEc66r6UFtK+wxLDxho0pj7Uf62ciDyY6IHSlMqxCjwOHS938MxA5 ( len: 1778 )
+[20/02/26 13:42:27] v1.0: WebSearch ( Google ) query execution: noticias mas destacadas de hoy España ( Results length: 922 )
+[20/02/26 13:43:31] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "¡Claro que sí, Anto! Vamos a ver qué está pasando por España hoy. 🇪🇸 \n\nHe revisado los portales principales y aquí te traigo un resumen con lo que más está dando de qué hablar:\n\n⛈️ **Clima y Temporal:** Se reportan vientos muy fuertes, temporal marítimo y la llegada de más lluvias en distintas zonas del país. ¡Espero que por donde tú estás el clima sea más amable, abríg ( len: 5905 )
