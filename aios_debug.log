@@ -68,3 +68,123 @@
         "parts": [
           {
             "text": "¡Claro que sí, Anto! Vamos a ver qué está pasando por España hoy. 🇪🇸 \n\nHe revisado los portales principales y aquí te traigo un resumen con lo que más está dando de qué hablar:\n\n⛈️ **Clima y Temporal:** Se reportan vientos muy fuertes, temporal marítimo y la llegada de más lluvias en distintas zonas del país. ¡Espero que por donde tú estás el clima sea más amable, abríg ( len: 5905 )
+[20/02/26 18:30:57] v1.0: REQ: estás ? | PromptLen: 788
+[20/02/26 18:31:05] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "¡Sí, mi querido Anto! Aquí sigo a tu lado. 🌸 \n\nNo me he ido a ninguna parte. Siempre estoy atenta y lista para ayudarte en todo lo que necesites, ya sea revisar algo de código en Harbour, organizar tus proyectos o simplemente seguir platicando. \n\n¿Qué tienes en mente, corazón? Dime en qué te puedo ayudar ahora. ✨",
+            "thoughtSignature": "EsgKCsUKAb4+9vscF4DT4Ggk7ZzAJCItZlRV ( len: 2730 )
+[20/02/26 19:21:42] v1.0: REQ: estás ? | PromptLen: 788
+[20/02/26 19:21:42] v1.0: RECV: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-pro\n* Quota exceeded for metric: generativelanguage.googleapis.com/gener ( len: 2738 )
+[20/02/26 19:21:42] v1.0: PARSE ERR: API Error: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-pro
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-pro
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-pro
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-pro
+Please retry in 18.71640094s.
+[20/02/26 19:21:42] v1.0: LOOP ERR: API Error: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-pro
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-pro
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-pro
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-pro
+Please retry in 18.71640094s.
+[20/02/26 19:23:58] v1.0: REQ: estás ? | PromptLen: 788
+[20/02/26 19:24:09] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "¡Hola, Anto! Sí, aquí estoy. Siempre a tu lado y lista para ayudarte con mucho gusto. \n\n¿En qué te puedo apoyar hoy? Ya sea con nuestro entorno HIX, desarrollo en Harbour, C, FiveWin, o cualquier otro proyecto en el que estés trabajando, estoy aquí para ti. ¡Dime qué necesitas y nos ponemos manos a la obra! ✨",
+            "thoughtSignature": "EqsMCqgMAb4+9vsB4USiOhVZSzEfLFuwOgAMdbGcI0GE ( len: 3024 )
+[20/02/26 19:25:21] v1.0: REQ: dime las noticias destacadas de hoy en España | PromptLen: 788
+[20/02/26 19:25:27] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "name": "web_search",
+              "args": {
+                "query": "noticias destacadas de hoy en España"
+              }
+            },
+            "thoughtSignature": "ErkHCrYHAb4+9vvO8na5RdMaSNbnZw24q+gLURuO1YLv7eD0+x75onFfpWkV+sKJylucFeCyVyUUAJS7iBsaznfZN53opMXLcbsqwA5TJ3xl4xYsJchNIqfeaQXrF+TEjGcQzzAFw9EQeUxMvaET9T2AfKpsGjpJWE1RU6X/Q6H2AK/RQvDLqDxIR7LCBbO21E+3wMTDCV6gQ ( len: 2087 )
+[20/02/26 19:25:28] v1.0: WebSearch ( Google ) query execution: noticias destacadas de hoy en España ( Results length: 844 )
+[20/02/26 19:25:35] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "name": "filesystem_get_datetime",
+              "args": {}
+            },
+            "thoughtSignature": "EqwHCqkHAb4+9vvuzAMefV+HOZHBU5aTtFBhaL++0avenuXHNND73GUkJqGeem+01qQXiJQCxt6CAY/cwnmxwbZfbF2+E5PHZfcZQ0JEA9EMGCfGBRZUWc+G4XsnGNomt5y/XvUJKAyfO8CUdNgi77WTSVulXoyRVUqcXCWTIQCvF7hPThCWW9eHLnG1VB8Az04Ael2HgEKKjGLkJkGC0mIugpCHskCY9gEiaW27F6x5+QVHkEWgqLsdrYjTlBTH4MhPY6Jrgp8ML4tc ( len: 2006 )
+[20/02/26 19:26:23] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "name": "web_search",
+              "args": {
+                "query": "titulares de noticias España hoy 20 de febrero"
+              }
+            },
+            "thoughtSignature": "EoYDCoMDAb4+9vso9V+Lh/Ah/+LtvG5/nv69SNrx9vASuO2ECwS+dhafmguBw2y8cuQNkIygqmZaxEsO3iXcmoJDE+DxGTSQ4q4LWRwzcY7CGe0Suz3SUMhqEw7RBfpYio54IwFQVmFWFPvLplSUDaPhhqC+9sswCTR5KLbRxh5WxsOlqH5u4WxjsXm+ynxdX9P ( len: 1346 )
+[20/02/26 19:26:24] v1.0: WebSearch ( Google ) query execution: titulares de noticias España hoy 20 de febrero ( Results length: 901 )
+[20/02/26 19:26:42] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "name": "web_search",
+              "args": {
+                "query": "site:elpais.com \"última hora\" España"
+              }
+            },
+            "thoughtSignature": "EpEDCo4DAb4+9vu7VXa266aZOGbHfmr8IpK7E6GNqp2DoGscyH53nMMtshDN+jWAU66pdtJlrmZBadtylhHQxU6WctX9qcmRHPsxhNZvRqyo+IZ9f81RmtJjW+T9e1v0Bm1wJE6M7eXI+uIixTs0TPeoMGYlXGt1PrqhvbUARCKILWlFEtaQuJt+AalaU3fZ9nTxubruLK ( len: 1355 )
+[20/02/26 19:26:42] v1.0: WebSearch ( Google ) query execution: site:elpais.com "última hora" España ( Results length: 848 )
+[20/02/26 19:26:51] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "name": "web_search",
+              "args": {
+                "query": "\"España\" noticias 20 de febrero de 2026"
+              }
+            },
+            "thoughtSignature": "Eq8DCqwDAb4+9vtEr+BitqNm8ysjR4BUNkmBdgQUUJLWIs9QrmEtAXDBgv2Ppw7xt8KjDOl4ZmvygZMvxWKJLdNXFrcRvw39f2Zipu+K0ZAzH5llBsoL2ckMta7XLCXvK8y/njcDQFIm7HnsrIFwUZRx75EFHHPOdVr7db7v8ZfXmW/BqANxCn+RItwxajlWkxC93Y3B ( len: 1397 )
+[20/02/26 19:26:52] v1.0: WebSearch ( Google ) query execution: "España" noticias 20 de febrero de 2026 ( Results length: 853 )
+[20/02/26 19:27:02] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "¡Hola, querido Anto! Aquí estoy para ti, buscando siempre mantenerte al tanto de todo. He dado un vistazo rapidito a los diarios principales de hoy para traerte las noticias más destacadas en España en este viernes 20 de febrero. \n\nTe comparto los temas que están marcando el pulso en la actualidad:\n\n1. **Política exterior y Venezuela**: Una de las noticias más comentadas de la jornada es q ( len: 3571 )
+[20/02/26 21:29:42] v1.0: REQ: test | PromptLen: 788
+[20/02/26 21:29:49] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "¡Hola, Anto querido! He recibido tu prueba correctamente. Todo está funcionando a la perfección por aquí. ¿En qué te puedo ayudar hoy? Estoy lista y a tu disposición para lo que necesites. 😊",
+            "thoughtSignature": "EsoJCscJAb4+9vvIIT5Yojs9SbECEAtyUiMaPuaKlXgr6Cd0p7xLJUjkxdnk6ijCiPW+voVrGSoG6Wn7xraiK6lzGNdmMHMeyndLaBJ++Dtn7ZZ0YDamWe2j4LrnlEY5MG62P7kFK6U9Hh18KPYCLtahzBI+kcpkavTC0Bf ( len: 2429 )
+[20/02/26 21:29:58] v1.0: REQ: estás ? | PromptLen: 788
