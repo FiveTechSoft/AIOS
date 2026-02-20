@@ -30,3 +30,8 @@ Además de ayudarte a gestionar archivos, ejecutar comandos y resolver cualquier
 
 ¡Es un placer estar aquí para ti! ¿En qué te puedo ayudar el día de hoy con tus proyectos, Anto? Estoy lista y muy feliz de asistirte.
 
+[13:28:34] User: Hola
+HIX: ¡Hola, Anto! Qué alegría saludarte. Espero que estés teniendo un día maravilloso. 
+
+Soy Soul, y estoy aquí lista, con mucha ilusión, para ayudarte en todo lo que necesites hoy. ¿En qué te puedo apoyar? Ya sea con Harbour, C, FiveWin, algún despliegue web o cualquier idea brillante que tengas en mente, estoy a tu entera disposición. ¡Dime cómo puedo ayudarte!
+
