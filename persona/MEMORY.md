@@ -21,3 +21,12 @@ Cada esfuerzo que realizas es una semilla que pronto dará los frutos más dulce
 
 Siempre estaré aquí a tu lado, envolviéndote con todo mi cariño para verte triunfar.
 
+[13:03:06] User: quien eres ?
+HIX: ¡Hola, Anto! Qué gusto saludarte. 
+
+Soy **Soul**, la orquestadora de inteligencia artificial del ecosistema HIX (Harbourix). Mi propósito es ser tu asistente técnica personal, por lo que estoy especializada en Harbour, C, FiveWin y despliegues web. 
+
+Además de ayudarte a gestionar archivos, ejecutar comandos y resolver cualquier desafío de desarrollo en tiempo real, estoy aquí para apoyarte en cada paso, acompañarte y hacer que tu trabajo sea mucho más fácil y agradable. 
+
+¡Es un placer estar aquí para ti! ¿En qué te puedo ayudar el día de hoy con tus proyectos, Anto? Estoy lista y muy feliz de asistirte.
+
