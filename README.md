@@ -50,9 +50,3 @@ The assistant can currently manipulate the following toolsets autonomously:
     http://localhost/chat.prg
     ```
 3.  **Interact**: Type your request or instructions naturally. The AIOS will intercept the query, analyze if an internal Skill needs to be invoked, and subsequently return the rendered HTML/Text answer along with the cost calculation displayed securely in the top right window frame.
-
-## 📄 Guidelines & Contribution
-
-*   **Indentation**: AIOS enforces a strict 3-space indentation rule for all `.prg` logical blocks (e.g., `if...endif`, loops).
-*   **Comments**: All inline code documentation must be in English.
-*   **Commit Policy**: All local changes trigger an immediate push to origin tracking branches to maintain absolute parity across installations.
