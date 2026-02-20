@@ -33,15 +33,28 @@ function Cron_AddReminder( hArgs )
    local cMsg := hb_HGetDef( hArgs, "message", "" )
    local nMinutes := hb_HGetDef( hArgs, "minutes", 0 )
    local cChatId := hb_HGetDef( hArgs, "chat_id", "" )
+   local cJsScript := ""
 
    if Empty( cMsg ) .or. nMinutes <= 0
    hR['success'] := .f. ; hR['error'] := "Invalid reminder params" ; retu hR
    endif
 
-   // Start background thread for reminder
+   if Empty( cChatId ) .or. lower( cChatId ) == "web" .or. lower( cChatId ) == "browser"
+   // Frontend Web reminder using evaluation
+   cJsScript += "setTimeout( function() { "
+   cJsScript += "   if (typeof addMessage === 'function') { "
+   cJsScript += "       addMessage( 'bot', '⏰ <b>[RECORDATORIO]</b><br>" + StrTran( cMsg, "'", "\'" ) + "' ); "
+   cJsScript += "   } "
+   cJsScript += "}, " + AllTrim( Str( nMinutes * 60 * 1000 ) ) + " );"
+      
+   hR['js_eval'] := cJsScript
+   hR['message'] := "Reminder scheduled correctly in the user's browser for " + AllTrim( Str( nMinutes ) ) + " minutes from now."
+   else
+   // Original: Start background thread for Telegram reminder
    hb_threadStart( { |m, n, c| Cron_ReminderThread( m, n, c ) }, cMsg, nMinutes, cChatId )
+   hR['message'] := "Reminder scheduled in Telegram in " + AllTrim( Str( nMinutes ) ) + " minutes."
+   endif
 
-   hR['message'] := "Reminder scheduled in " + AllTrim( Str( nMinutes ) ) + " minutes."
 retu hR
 
 function Cron_ReminderThread( cMsg, nMinutes, cChatId )
