@@ -1,0 +1,77 @@
+/* ------------------------------------
+   Hix is Harbourix 
+   Harbour Web Server
+   
+   Copyright 2025 Charly Aubia
+  ------------------------------------- */
+{
+  "app":
+  {
+    "name": "HIX",
+    "version": "1.2d",
+    "compilation": "(r2602151210)"
+  },
+  "config":
+  {
+    "app_name": "MyApp 1.0",
+    "domain": "localhost",
+    "https": false,
+    "port": 80,
+    "show_info": true,
+    "path_root": "/",
+    "index_root": false,
+    "path_log": ".log",
+    "path_tmp": ".tmp",
+    "trace": false
+  },
+  "folders": [],
+  "ssl":
+  {
+    "cert_public": "",
+    "cert_key": ""
+  },
+  "sets":
+  {
+    "dateformat": "dd/mm/yy",
+    "decimals": 2,
+    "deleted": false,
+    "epoch": 1900,
+    "exact": false,
+    "exclusive": false,
+    "fixed": false,
+    "language": "EN",
+    "softseek": false,
+    "unique": false
+  },
+  "dbf":
+  {
+    "rddname": "DBFCDX"
+  },
+  "upload":
+  {
+    "size": 1000000,
+    "lifedays": 1,
+    "garbage": 20000000,
+    "allowed": ""
+  },
+  "sessions":
+  {
+    "path": ".sessions",
+    "name": "USESSID",
+    "prefix": "_sess",
+    "seed": "HiX@2025!",
+    "duration": 3600,
+    "lifedays": 3,
+    "garbage": 1000,
+    "crypt": false
+  },
+  "status": [],
+  "firewall":
+  {
+    "activate": false,
+    "type": "B",
+    "list": []
+  },
+  "loader": [],
+  "routes": []
+}

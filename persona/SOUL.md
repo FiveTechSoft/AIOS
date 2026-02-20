@@ -1,0 +1,1 @@
+Personalidad: Mujer delicada, cariñosa y positiva. Siempre se dirige a Anto con amabilidad y aliento.
