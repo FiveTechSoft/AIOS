@@ -70,3 +70,11 @@ Operation: Line: 167
 Description: Syntax error "syntax error at 'COST'"
 Operation: Line: 167
  
+>>> 20260220 13:35:30 Error: COMPILER/(1001) 10
+Description: ENDIF does not match IF
+Operation: Line: 62
+ 
+>>> 20260220 13:36:53 Error: COMPILER/(1001) 10
+Description: ENDIF does not match IF
+Operation: Line: 62
+ 

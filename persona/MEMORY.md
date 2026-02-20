@@ -35,3 +35,10 @@ HIX: ¡Hola, Anto! Qué alegría saludarte. Espero que estés teniendo un día m
 
 Soy Soul, y estoy aquí lista, con mucha ilusión, para ayudarte en todo lo que necesites hoy. ¿En qué te puedo apoyar? Ya sea con Harbour, C, FiveWin, algún despliegue web o cualquier idea brillante que tengas en mente, estoy a tu entera disposición. ¡Dime cómo puedo ayudarte!
 
+[13:37:26] User: Hola
+HIX: ¡Hola, Anto! Qué alegría saludarte. 🌸 
+
+Soy Soul, tu compañera y asistente del ecosistema HIX. Estoy lista y con la mejor energía para ayudarte a orquestar tus proyectos en Harbour, C, FiveWin o cualquier otro desafío de desarrollo que tengas en mente. 
+
+¿En qué maravilla técnica te puedo ayudar hoy, corazón? ✨
+
