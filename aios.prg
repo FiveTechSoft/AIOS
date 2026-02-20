@@ -37,10 +37,10 @@ function main()
 
    // Load Identity & Soul
    if File( cBaseDir + "persona" + cSep + "IDENTITY.md" )
-      cSystemPrompt += "TU IDENTIDAD:" + ( Chr( 13 )+Chr( 10 ) ) + hb_MemoRead( cBaseDir + "persona" + cSep + "IDENTITY.md" ) + ( Chr( 13 )+Chr( 10 ) )
+   cSystemPrompt += "TU IDENTIDAD:" + ( Chr( 13 )+Chr( 10 ) ) + hb_MemoRead( cBaseDir + "persona" + cSep + "IDENTITY.md" ) + ( Chr( 13 )+Chr( 10 ) )
    endif
    if File( cBaseDir + "persona" + cSep + "SOUL.md" )
-      cSystemPrompt += "TU ALMA:" + ( Chr( 13 )+Chr( 10 ) ) + hb_MemoRead( cBaseDir + "persona" + cSep + "SOUL.md" ) + ( Chr( 13 )+Chr( 10 ) )
+   cSystemPrompt += "TU ALMA:" + ( Chr( 13 )+Chr( 10 ) ) + hb_MemoRead( cBaseDir + "persona" + cSep + "SOUL.md" ) + ( Chr( 13 )+Chr( 10 ) )
    endif
 
    cMemPath := cBaseDir + "persona" + cSep + "MEMORY.md"
@@ -53,16 +53,16 @@ function main()
 
    // Save to Memory
    if ValType( hResult ) == "H" .and. hb_HGetDef( hResult, 'success', .f. )
-      if ! hb_DirExists( cBaseDir + "persona" ) ; hb_DirCreate( cBaseDir + "persona" ) ; endif
-         cOldMem := "" ; if File( cMemPath ) ; cOldMem := hb_MemoRead( cMemPath ) ; endif
-         hb_MemoWrit( cMemPath, cOldMem + "[" + Time() + "] User: " + cQuery + ( Chr( 13 )+Chr( 10 ) ) + "HIX: " + hb_ValToStr( hResult['text'] ) + ( Chr( 13 )+Chr( 10 ) ) + ( Chr( 13 )+Chr( 10 ) ) )
-      endif
+   if ! hb_DirExists( cBaseDir + "persona" ) ; hb_DirCreate( cBaseDir + "persona" ) ; endif
+   cOldMem := "" ; if File( cMemPath ) ; cOldMem := hb_MemoRead( cMemPath ) ; endif
+   hb_MemoWrit( cMemPath, cOldMem + "[" + Time() + "] User: " + cQuery + ( Chr( 13 )+Chr( 10 ) ) + "HIX: " + hb_ValToStr( hResult['text'] ) + ( Chr( 13 )+Chr( 10 ) ) + ( Chr( 13 )+Chr( 10 ) ) )
+   endif
 
-      hResult["v"] := "1.7"
-      cJsonRes := hb_jsonEncode( hResult )
+   hResult["v"] := "1.7"
+   cJsonRes := hb_jsonEncode( hResult )
 
-      RECOVER USING oErr
-      cJsonRes := '{"success":false, "error":"RTE: ' + hb_ValToStr( oErr:Description ) + '", "v":"1.7-err"}'
+   RECOVER USING oErr
+   cJsonRes := '{"success":false, "error":"RTE: ' + hb_ValToStr( oErr:Description ) + '", "v":"1.7-err"}'
    END
 
    UWrite( cJsonRes )
@@ -73,16 +73,16 @@ function LogTrace( cMsg )
    nH := fOpen( "aios_debug.log", 1 )
    if nH < 0 ; nH := fCreate( "aios_debug.log" ) ; endif
    if nH > 0
-      fSeek( nH, 0, 2 )
-      fWrite( nH, "[" + DToC( Date() ) + " " + Time() + "] v1.7: " + hb_ValToStr( cMsg ) + ( Chr( 13 )+Chr( 10 ) ) )
-      fClose( nH )
+   fSeek( nH, 0, 2 )
+   fWrite( nH, "[" + DToC( Date() ) + " " + Time() + "] v1.7: " + hb_ValToStr( cMsg ) + ( Chr( 13 )+Chr( 10 ) ) )
+   fClose( nH )
    endif
 return nil
 
 function ExecuteReasoningLoop( cQuery, cModel, cHistory, cSystemPrompt )
    local aFunctions := BuildAiosFunctions()
    local aMessages := {}, nStep := 0, hResult := { "success" => .f. }, hGeminiResult, hSkillResult, hMsg, aResponseParts, hPart, lHasFC
-   local cFullText := ""
+   local cFullText := "", nPromptTokens := 0, nCandidatesTokens := 0, nTotalTokens := 0
 
    if ! Empty( cHistory ) ; hb_jsonDecode( cHistory, @aMessages ) ; endif
    if ValType( aMessages ) != "A" ; aMessages := {} ; endif
@@ -90,42 +90,54 @@ function ExecuteReasoningLoop( cQuery, cModel, cHistory, cSystemPrompt )
    aAdd( aMessages, { "role" => "user", "parts" => { { "text" => cQuery } } } )
 
    do while nStep < 10 // Increase steps for safety
-      nStep++
-      hGeminiResult := GeminiCallFC( aMessages, aFunctions, cModel, cSystemPrompt )
+   nStep++
+   hGeminiResult := GeminiCallFC( aMessages, aFunctions, cModel, cSystemPrompt )
 
-      if ValType( hGeminiResult ) != "H" .or. ! hb_HGetDef( hGeminiResult,"success",.f. )
-         if nStep > 1 .and. ! Empty( cFullText )
-            // If it fails after Turn 1 but we have text, return it
-            hResult['success'] := .t. ; hResult['text'] := cFullText ; hResult['model_used'] := cModel ; retu hResult
-         endif
-         hResult['success'] := .f. ; hResult['error'] := hb_ValToStr( hb_HGetDef( hGeminiResult, "error", "API Fail" ) )
-         LogTrace( "LOOP ERR: " + hResult['error'] )
-         retu hResult
-      endif
+   if ValType( hGeminiResult ) != "H" .or. ! hb_HGetDef( hGeminiResult,"success",.f. )
+   if nStep > 1 .and. ! Empty( cFullText )
+   // If it fails after Turn 1 but we have text, return it
+   hResult['success'] := .t. ; hResult['text'] := cFullText ; hResult['model_used'] := cModel
+   hResult['usageMetadata'] := { "promptTokenCount" => nPromptTokens, "candidatesTokenCount" => nCandidatesTokens, "totalTokenCount" => nTotalTokens }
+   retu hResult
+   endif
+   hResult['success'] := .f. ; hResult['error'] := hb_ValToStr( hb_HGetDef( hGeminiResult, "error", "API Fail" ) )
+   LogTrace( "LOOP ERR: " + hResult['error'] )
+   retu hResult
+   endif
 
-      hMsg := { "role" => "model", "parts" => hGeminiResult["raw_parts"] }
-      aAdd( aMessages, hMsg )
+   if hb_HHasKey( hGeminiResult, "usageMetadata" )
+   nPromptTokens += hb_HGetDef( hGeminiResult["usageMetadata"], "promptTokenCount", 0 )
+   nCandidatesTokens += hb_HGetDef( hGeminiResult["usageMetadata"], "candidatesTokenCount", 0 )
+   nTotalTokens += hb_HGetDef( hGeminiResult["usageMetadata"], "totalTokenCount", 0 )
+   endif
 
-      // Accumulate text from this turn
-      if ! Empty( hGeminiResult['text'] )
-         cFullText += hGeminiResult['text']
-      endif
+   hMsg := { "role" => "model", "parts" => hGeminiResult["raw_parts"] }
+   aAdd( aMessages, hMsg )
 
-      if hGeminiResult['type'] == "function_call"
-         aResponseParts := {}
-         for each hPart in hGeminiResult["raw_parts"]
-            if ValType( hPart ) == "H" .and. hb_HHasKey( hPart, "functionCall" )
-               hSkillResult := ExecuteAiosSkill( hPart["functionCall"]["name"], hPart["functionCall"]["args"] )
-               aAdd( aResponseParts, { "functionResponse" => { "name" => hPart["functionCall"]["name"], "response" => hSkillResult } } )
-            endif
-         next
-         aAdd( aMessages, { "role" => "function", "parts" => aResponseParts } )
-      elseif hGeminiResult['type'] == "text"
-         hResult['success'] := .t. ; hResult['text'] := cFullText ; hResult['model_used'] := cModel ; retu hResult
-      else
-         // Type is 'empty' or unknown, but if we have text, we are done
-         hResult['success'] := .t. ; hResult['text'] := iif( Empty( cFullText ), "OK", cFullText ) ; hResult['model_used'] := cModel ; retu hResult
-      endif
+   // Accumulate text from this turn
+   if ! Empty( hGeminiResult['text'] )
+   cFullText += hGeminiResult['text']
+   endif
+
+   if hGeminiResult['type'] == "function_call"
+   aResponseParts := {}
+   for each hPart in hGeminiResult["raw_parts"]
+   if ValType( hPart ) == "H" .and. hb_HHasKey( hPart, "functionCall" )
+   hSkillResult := ExecuteAiosSkill( hPart["functionCall"]["name"], hPart["functionCall"]["args"] )
+   aAdd( aResponseParts, { "functionResponse" => { "name" => hPart["functionCall"]["name"], "response" => hSkillResult } } )
+   endif
+   next
+   aAdd( aMessages, { "role" => "function", "parts" => aResponseParts } )
+   elseif hGeminiResult['type'] == "text"
+   hResult['success'] := .t. ; hResult['text'] := cFullText ; hResult['model_used'] := cModel
+   hResult['usageMetadata'] := { "promptTokenCount" => nPromptTokens, "candidatesTokenCount" => nCandidatesTokens, "totalTokenCount" => nTotalTokens }
+   retu hResult
+   else
+   // Type is 'empty' or unknown, but if we have text, we are done
+   hResult['success'] := .t. ; hResult['text'] := iif( Empty( cFullText ), "OK", cFullText ) ; hResult['model_used'] := cModel
+   hResult['usageMetadata'] := { "promptTokenCount" => nPromptTokens, "candidatesTokenCount" => nCandidatesTokens, "totalTokenCount" => nTotalTokens }
+   retu hResult
+   endif
    enddo
 return hResult
 
@@ -150,17 +162,17 @@ function GeminiCallFC( aMessages, aFunctions, cModel, cSystemPrompt )
 
    nError := curl_easy_perform( hCurl )
    if nError == HB_CURLE_OK
-      cResponse := curl_easy_dl_buff_get( hCurl )
-      LogTrace( "RECV: " + Left( cResponse, 500 ) + " ( len: " + AllTrim( Str( Len( cResponse ) ) ) + " )" )
-      hResult := ParseAiosFCResponse( cResponse )
-      if ! hResult['success'] ; LogTrace( "PARSE ERR: " + hb_ValToStr( hResult['error'] ) ) ; endif
-      else
-         hResult['error'] := "Curl error: " + hb_ValToStr( nError )
-         LogTrace( "CURL ERR: " + AllTrim( Str( nError ) ) )
-      endif
-      curl_easy_cleanup( hCurl )
+   cResponse := curl_easy_dl_buff_get( hCurl )
+   LogTrace( "RECV: " + Left( cResponse, 500 ) + " ( len: " + AllTrim( Str( Len( cResponse ) ) ) + " )" )
+   hResult := ParseAiosFCResponse( cResponse )
+   if ! hResult['success'] ; LogTrace( "PARSE ERR: " + hb_ValToStr( hResult['error'] ) ) ; endif
    else
-      hResult['error'] := "Curl init failed"
+   hResult['error'] := "Curl error: " + hb_ValToStr( nError )
+   LogTrace( "CURL ERR: " + AllTrim( Str( nError ) ) )
+   endif
+   curl_easy_cleanup( hCurl )
+   else
+   hResult['error'] := "Curl init failed"
    endif
 retu hResult
 
@@ -179,27 +191,31 @@ function ParseAiosFCResponse( cJSON )
    hResult['type'] := 'unknown'
 
    for each hPart in aParts
-      if ValType( hPart ) == "H"
-         if hb_HHasKey( hPart, "functionCall" ) ; lHasFC := .t. ; endif
-         if hb_HHasKey( hPart, "text" ) ; hResult['text'] += hPart["text"] ; endif
-         endif
-      next
+   if ValType( hPart ) == "H"
+   if hb_HHasKey( hPart, "functionCall" ) ; lHasFC := .t. ; endif
+   if hb_HHasKey( hPart, "text" ) ; hResult['text'] += hPart["text"] ; endif
+   endif
+   next
 
-      if lHasFC
-         hResult['type'] := 'function_call'
-      elseif ! Empty( hResult['text'] )
-         hResult['type'] := 'text'
-      endif
+   if lHasFC
+   hResult['type'] := 'function_call'
+   elseif ! Empty( hResult['text'] )
+   hResult['type'] := 'text'
+   endif
    elseif hb_HHasKey( hResponse, "error" )
-      hResult['error'] := "API Error: " + hb_ValToStr( hResponse["error"]["message"] )
+   hResult['error'] := "API Error: " + hb_ValToStr( hResponse["error"]["message"] )
    elseif hb_HHasKey( hResponse, "usageMetadata" )
-      // Valid response but empty of content ( happens after tool turns sometimes )
-      hResult['success'] := .t. ; hResult['type'] := 'empty' ; hResult['raw_parts'] := {} ; hResult['text'] := ""
+   // Valid response but empty of content ( happens after tool turns sometimes )
+   hResult['success'] := .t. ; hResult['type'] := 'empty' ; hResult['raw_parts'] := {} ; hResult['text'] := ""
    else
-      hResult['error'] := "Invalid API Response Structure"
+   hResult['error'] := "Invalid API Response Structure"
    endif
    else
    hResult['error'] := "JSON Parse Error ( Code: " + AllTrim( Str( nErr ) ) + " )"
+   endif
+
+   if ValType( hResponse ) == "H" .and. hb_HHasKey( hResponse, "usageMetadata" )
+   hResult["usageMetadata"] := hResponse["usageMetadata"]
    endif
 retu hResult
 
@@ -223,19 +239,19 @@ retu aFuncs
 function ExecuteAiosSkill( cName, hArgs )
    local hRes := { "success" => .f. }
    do case
-      case cName == 'filesystem_search' ; hRes := Aios_FileSystem( cName, hArgs )
-      case cName == 'identity_get_context' ; hRes := Aios_Identity()
-      case cName == 'telegram_send_message' ; hRes := Aios_Telegram( cName, hArgs )
-      case cName == 'telegram_get_updates' ; hRes := Aios_Telegram( cName, hArgs )
-      case cName == 'config_set' ; hRes := Aios_Config( 'config_set', hArgs )
-      case cName == 'config_get' ; hRes := Aios_Config( 'config_get', hArgs )
-      case cName == 'memory_summarize' ; hRes := Aios_MemorySummarize( hArgs )
-      case cName == 'filesystem_get_datetime' ; hRes := Aios_FileSystem( cName, hArgs )
-      case cName == 'identity_update' ; hRes := Aios_PersonaUpdate( 'identity', hArgs )
-      case cName == 'soul_update' ; hRes := Aios_PersonaUpdate( 'soul', hArgs )
-      case cName == 'cron_add_reminder' ; hRes := Aios_Cron( cName, hArgs )
-      case cName == 'web_search' ; hRes := Aios_WebSearch( hArgs )
-      case cName == 'web_search_wiki' ; hRes := Aios_WebSearchWiki( hArgs )
+   case cName == 'filesystem_search' ; hRes := Aios_FileSystem( cName, hArgs )
+   case cName == 'identity_get_context' ; hRes := Aios_Identity()
+   case cName == 'telegram_send_message' ; hRes := Aios_Telegram( cName, hArgs )
+   case cName == 'telegram_get_updates' ; hRes := Aios_Telegram( cName, hArgs )
+   case cName == 'config_set' ; hRes := Aios_Config( 'config_set', hArgs )
+   case cName == 'config_get' ; hRes := Aios_Config( 'config_get', hArgs )
+   case cName == 'memory_summarize' ; hRes := Aios_MemorySummarize( hArgs )
+   case cName == 'filesystem_get_datetime' ; hRes := Aios_FileSystem( cName, hArgs )
+   case cName == 'identity_update' ; hRes := Aios_PersonaUpdate( 'identity', hArgs )
+   case cName == 'soul_update' ; hRes := Aios_PersonaUpdate( 'soul', hArgs )
+   case cName == 'cron_add_reminder' ; hRes := Aios_Cron( cName, hArgs )
+   case cName == 'web_search' ; hRes := Aios_WebSearch( hArgs )
+   case cName == 'web_search_wiki' ; hRes := Aios_WebSearchWiki( hArgs )
    endcase
 retu hRes
 
@@ -261,7 +277,7 @@ function Hix_UrlDecode( cT )
    cT := StrTran( cT, "+", " " )
    do while n <= Len( cT )
    if SubStr( cT, n, 1 ) == "%"
-      cX := SubStr( cT, n + 1, 2 ) ; cR += Chr( Hix_HexToNum( cX ) ) ; n += 3
+   cX := SubStr( cT, n + 1, 2 ) ; cR += Chr( Hix_HexToNum( cX ) ) ; n += 3
    else ; cR += SubStr( cT, n, 1 ) ; n++ ; endif
    enddo
 retu cR

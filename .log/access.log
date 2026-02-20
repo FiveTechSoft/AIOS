@@ -1,3 +1,5 @@
 127.0.0.1 - - [20/Feb/2026:13:02:06 +0000] "GET / HTTP/1.1" 200 56314 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"
 127.0.0.1 - - [20/Feb/2026:13:02:14 +0000] "GET /chat.prg HTTP/1.1" 200 7407 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"
 127.0.0.1 - - [20/Feb/2026:13:03:06 +0000] "POST /aios.prg HTTP/1.1" 200 707 "http://localhost/chat.prg" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"
+127.0.0.1 - - [20/Feb/2026:13:06:20 +0000] "GET /chat.prg HTTP/1.1" 200 5667 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"
+127.0.0.1 - - [20/Feb/2026:13:06:20 +0000] "GET /files/uhttpd2/images/favicon.ico HTTP/1.1" 404 48 "http://localhost/chat.prg" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"
