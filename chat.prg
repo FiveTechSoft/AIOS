@@ -79,6 +79,7 @@ function main()
    cHtml += "        .typing { display: flex; gap: 4px; padding: 10px; }"
    cHtml += "        .dot { width: 8px; height: 8px; background: #6366f1; border-radius: 50%; animation: bounce 1.4s infinite ease-in-out; }"
    cHtml += "        @keyframes bounce { 0%, 80%, 100% { transform: scale( 0 ); } 40% { transform: scale( 1 ); } }"
+   cHtml += "        #voice-select option { background: #1e1e1e; color: #e2e8f0; }"
    cHtml += "    </style>"
    cHtml += "</head>"
    cHtml += "<body>"
