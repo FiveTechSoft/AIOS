@@ -39,7 +39,6 @@ The assistant can currently manipulate the following toolsets autonomously:
 ### Requirements
 *   **Harbour Compiler**: Requires `hbmk2` mapped in your `PATH`.
 *   **Environment**: Built for Windows environments (or cross-compiled targets) running standard `hbcurl.hbc`, `xhb.hbc`, and `hbhttpd.hbc` modules.
-*   **HIX Server**: Must be hosted over an HTTP Daemon configured to render `.prg` web files dynamically.
 
 ### Configuration
 1.  **Gemini API Key**: You must provide a valid Gemini API Key. The core looks for the `GEMINI_API_KEY` system environment variable, or alternatively, a fallback `api_key` string inside `gemini_config.json`.
