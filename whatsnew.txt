@@ -11,12 +11,17 @@
     responses in `chat.prg` using the native browser `SpeechSynthesis` API.
     Included a mute/unmute toggle switch (🔊) and a dropdown selector to choose
     between different Spanish voices available in the operating system.
-    *   **Update**: Configured the dropdown to prioritize the "Google español de Estados Unidos" default voice.
-    *   **Update**: Added regex filters to prevent the system from verbally reading base64 image data strings when generating pictures.
+    *   **Update**: Configured the dropdown to prioritize the "Google español de
+        Estados Unidos" default voice.
+    *   **Update**: Added regex filters to prevent the system from verbally
+        reading base64 image data strings when generating pictures.
 
 *   **AI Image Generation**: Introduced a new `image_gen` backend skill using
-    the Gemini Imagen API (specifically targeting `nano-banana-pro-preview` for high quality generation). 
-    *   **Optimization**: Built a reasoning-loop interceptor in `aios.prg` that injects the 3MB+ Base64 image directly into the UI without sending it back for the LLM to process, saving massive token allocations.
+    the Gemini Imagen API (specifically targeting `nano-banana-pro-preview` for
+    high quality generation). 
+    *   **Optimization**: Built a reasoning-loop interceptor in `aios.prg` that
+        injects the 3MB+ Base64 image directly into the UI without sending it
+        back for the LLM to process, saving massive token allocations.
 
 ## 2026-02-20
 
