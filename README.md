@@ -25,10 +25,13 @@ AIOS is an experimental and highly robust AI Assistant platform natively built i
 ## 🛠️ Available Skills
 
 The assistant can currently manipulate the following toolsets autonomously:
-*   **FileSystem**: Search directories, open/edit configurations.
-*   **Telegram**: Fetch updates and send real-time notification messages.
-*   **Web Search**: Dual fallback methods utilizing Wikipedia JSON API and Google Serper API/DuckDuckGo for browsing.
-*   **Cron/Reminders**: Schedule tasks and time-sensitive reminders system-wide.
+*   **FileSystem**: Search directories, open/edit configurations and scripts.
+*   **Command Shell & Git**: Execute native OS terminal commands and manage version control via `shell` and `git` skills.
+*   **Telegram & WhatsApp**: Fetch updates and send real-time notification messages across popular messaging platforms.
+*   **Gmail**: Read and send emails programmatically via the `gmail` skill.
+*   **Web Search**: Dual fallback methods utilizing Wikipedia JSON API and Google Serper API/DuckDuckGo for live browsing.
+*   **Cron/Reminders & DateTime**: Schedule tasks, time-sensitive reminders, and access system clock synchronization.
+*   **Config & Identity**: Dynamically update internal configurations and its own personality core.
 *   **Image Generation**: Prompt natively processed text-to-image AI tools to visualize concepts dynamically into the browser (`image_gen.prg`).
 
 ## ⚙️ Setup & Installation
