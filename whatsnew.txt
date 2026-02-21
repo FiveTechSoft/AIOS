@@ -25,4 +25,4 @@
 
 ## 2026-02-21
 *   **Web Speech API Integration**: Added vocal interaction capabilities to `chat.prg` using the native browser `SpeechRecognition` API. Users can now click a microphone icon to transcribe spoken Spanish directly into the chat input, with automatic submission upon pausing.
-*   **Web Speech Synthesis (TTS)**: Added automatic text-to-speech reading of AI responses in `chat.prg` using the native browser `SpeechSynthesis` API. Included a mute/unmute toggle switch (🔊) in the chat header.
+*   **Web Speech Synthesis (TTS)**: Added automatic text-to-speech reading of AI responses in `chat.prg` using the native browser `SpeechSynthesis` API. Included a mute/unmute toggle switch (🔊) and a dropdown selector to choose between different Spanish voices available in the operating system.
