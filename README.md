@@ -19,7 +19,7 @@ AIOS is an experimental and highly robust AI Assistant platform natively built i
 *   **`aios.prg`**: The core backend engine. Manages the execution reasoning loop (`ExecuteReasoningLoop`), HTTP payload construction, and API error parsing (`ParseAiosFCResponse`).
 *   **`chat.prg`**: The frontend Web UI. Features a sleek, responsive design with "Thinking" indicators, HTML formatting conversions, and precise token/price tracking.
 *   **`whatsnew.txt`**: Detailed changelog of project evolution.
-*   **`.agent/skills/`**: The directory containing explicit guidelines for the development constraints and tools associated with the system (e.g., Harbour 3-space indentation rules).
+*   **`.agent/skills/`**: The directory containing explicit guidelines for the development constraints and tools associated with the system.
 *   **`persona/`**: Contains the `MEMORY.md`, `IDENTITY.md`, and `SOUL.md` that feed the dynamic system prompt.
 
 ## 🛠️ Available Skills
