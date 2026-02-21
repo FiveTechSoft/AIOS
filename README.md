@@ -42,8 +42,10 @@ The assistant can currently manipulate the following toolsets autonomously:
 *   **HIX Server**: Must be hosted over an HTTP Daemon configured to render `.prg` web files dynamically.
 
 ### Configuration
-1.  **API Key**: You must provide a valid Gemini API Key. The core looks for the `GEMINI_API_KEY` system environment variable, or alternatively, a fallback `api_key` string inside `gemini_config.json`.
-2.  **Compilation**: To manually compile the backend or frontend:
+1.  **Gemini API Key**: You must provide a valid Gemini API Key. The core looks for the `GEMINI_API_KEY` system environment variable, or alternatively, a fallback `api_key` string inside `gemini_config.json`.
+2.  **Web Search API**: For live Web Search capabilities, you must provide your Serper.dev API key inside the `serper_config.json` file.
+3.  **Telegram Bot API**: For messaging capabilities, configure your bot token and chat identifiers inside the `telegram_config.json` file.
+4.  **Compilation**: To manually compile the backend or frontend:
     ```cmd
     set PATH=c:\bcc77\bin;%PATH% 
     c:\harbour\bin\win\bcc\hbmk2.exe aios.prg hbcurl.hbc xhb.hbc hbhttpd.hbc
