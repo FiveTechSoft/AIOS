@@ -1183,3 +1183,546 @@ Please retry in 18.71640094s.
     "candidatesTokenCount": 42,
     "totalTokenCount": 1860,
     " ( len: 694 )
+[21/02/26 09:48:36] v1.0: REQ: Hola | PromptLen: 788
+[21/02/26 09:48:44] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "¡Hola Anto! Qué alegría saludarte. 🌸 \n\nEspero que estés teniendo un día maravilloso. Estoy aquí, lista y con muchas ganas de ayudarte en lo que necesites. ¿En qué te puedo asistir hoy? Ya sea con tus proyectos en Harbour, C, FiveWin, o cualquier otra tarea técnica en la que estés trabajando, cuenta conmigo para hacerlo más fácil y ameno. ¡Tú me dices por dónde empezamos! ✨",
+    ( len: 2724 )
+[21/02/26 11:17:15] v1.0: REQ: cambia el color de fondo a naranja | PromptLen: 788
+[21/02/26 11:17:20] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "name": "frontend_execute_js",
+              "args": {
+                "javascript": "document.body.style.backgroundColor = \"orange\";"
+              }
+            },
+            "thoughtSignature": "EooGCocGAb4+9vuM4QGt6LEhQbynaq4iz6qMQRNGRyRy+BLnCDtov4AfhaGzP2j3P4MrZzn6sDbWNKvK2HcgT45OmgXa1RIIF1wu6HxgJUOqnrTR0Xk/mHHBhxmamDQXBHZhuyUgQdf+r0I/aMwzl9RvpN9pwUOne97aojf3fbX/pqhQoxN ( len: 1883 )
+[21/02/26 11:17:26] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "¡Listo, Anto! ✨ He cambiado el color de fondo a un naranja vibrante. Espero que este color te llene de energía para seguir con tus proyectos. \n\n¿Hay algo más en lo que te pueda ayudar? ¡Estoy aquí para ti! 🧡"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 1395,
+    "candidatesT ( len: 744 )
+[21/02/26 11:17:43] v1.0: REQ: puedes cambiarlo a un degradado tipo arcoiris ? | PromptLen: 788
+[21/02/26 11:17:49] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "name": "frontend_execute_js",
+              "args": {
+                "javascript": "document.body.style.background = 'linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet)';"
+              }
+            },
+            "thoughtSignature": "Eu8HCuwHAb4+9vvMkPx4NU6U0VliJgCPV+KOJ82z87BZ9V8KBBmgm+GIjzARyJTZzkZ1cPJQ9eSXSk/r+gn6JOPba9pvuLDSfeLhxqR3WEDcS+F+DxO/3 ( len: 2249 )
+[21/02/26 11:17:53] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "¡Claro que sí, Anto! 🌈✨ \n\nYa he aplicado ese hermoso degradado de arcoíris al fondo. ¡Se ve lleno de vida y color! Espero que te dé mucha inspiración para todo lo que estés programando hoy. \n\nDime, ¿te gusta cómo quedó? ¿O quieres que hagamos alguna otra cosita en tu entorno o en tus códigos? ¡Aquí estoy siempre para apoyarte! 💖",
+            "thoughtSignature": "ErECCq4CAb4 ( len: 1358 )
+[21/02/26 11:18:28] v1.0: REQ: que dia es hoy ? | PromptLen: 788
+[21/02/26 11:18:37] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "name": "filesystem_get_datetime",
+              "args": {}
+            },
+            "thoughtSignature": "ErAECq0EAb4+9vuplMdkRu9aMTNObf23bhFOtzyVqaSvUF82zninYuxSBtL6P86/9ARmdrVGBjo0d5i9Z9aT8v9RW3QKgNfFtxgGNgrwcQGs6FFYcW7ZXb+FvmmcMUpqUkaAfmWiKG+9ho52BiwK75T6gFkkbdM0eaEFcURfx6OE77hjsNQ33n35pr3wnC0k+8UGDvh9dePWi07S7FmNUTVhP3pNy2LNNCM5ht7y6Swl1FhLJBJLSKbigkpxkwmh8gmVeXWj/x9tMs9E ( len: 1498 )
+[21/02/26 11:18:43] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "¡Hola Anto! 🌸 Hoy es sábado, 21 de febrero de 2026. \n\n¡Un hermoso día de fin de semana! ¿Tienes planes especiales para hoy o vas a aprovechar para avanzar en tus proyectos? Sea lo que sea que decidas hacer, ¡espero que lo disfrutes muchísimo y te salga genial! ✨ ¿En qué más te puedo ayudar mi niño?",
+            "thoughtSignature": "EuMGCuAGAb4+9vtUNhDn4aF0OfTkhm+1znHc0wx0+REhGeKaxE ( len: 2068 )
+[21/02/26 11:27:41] v1.0: REQ: qué hora es | PromptLen: 788
+[21/02/26 11:27:47] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "name": "filesystem_get_datetime",
+              "args": {}
+            },
+            "thoughtSignature": "EucICuQIAb4+9vu9huv+f5FF5DJDCbroFoXFGO6+/XxcbzjSx3Zpurzgnrh9T4AFbgG6awrRWWMGuEyalhvvAE3FxDRsVgRJMsEnUib3xrVF44DRpT55QNClRe3W8gh0ieiTNRe3lrzMSTxeftPudOtRdo7zR+BE3lRNIrGWlmwMkOtabyosMY8GJl5oe56ui2/MjsaZZTbeYXbO77nKBvmd8FkDLhNUFWN/n03+oCdWuOwLm1Fzs7xWRVra0g1eaZB+ZHqSsdAfHyIK ( len: 2254 )
+[21/02/26 11:27:51] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "¡Hola, Anto! En este momentito son las 11:27 de la mañana. ¿Te puedo ayudar con algo más, cariño? ¡Que tengas un día precioso!",
+            "thoughtSignature": "Eu8BCuwBAb4+9vv8LQ+qNiLjifBeFR+RSnNXtn2mLt2D0suYr3h0jOJKdg6100TUjEVbzddP/lmgj7R3PPviix49lEjpQe41bXehK5Lxg1fyJQcHEuv5feqJ9Fac8MD43azalJOhPuQlCDsy72wbY57aHXkzpLrMs9EUBrvT60sEvW28Bfv2AcAakj0jo7SvmQD55k5zAZJOwNCjU4/yvYkKS43aJ1GeV5mhF76QzR ( len: 1044 )
+[21/02/26 11:28:02] v1.0: REQ: quién soy yo | PromptLen: 788
+[21/02/26 11:28:06] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "¡Tú eres Anto! La persona maravillosa a la que tengo el placer de asistir. Siempre es un gusto hablar contigo. ¿Cómo estás hoy, cariño? ¿En qué te puedo ayudar?",
+            "thoughtSignature": "ErIHCq8HAb4+9vtIkvG3stmjlPkue+NZyqv0/pZtF2cCjpfQwtz1kCjwqD2JL75G+oq8Caofmw+3+gIU1LNoNHu6gX62rXvxIkT3ZBQTuoNPHwtUwCXDJWG+hvp9TgAcyoALBb6neLQVt0z21YSpNY2Pa1phTsDnHX9So/JP0/jSCSz0l31q7I1CTL1nJLIgnXF1PIO ( len: 2027 )
+[21/02/26 11:29:34] v1.0: REQ: me escuchas | PromptLen: 788
+[21/02/26 11:29:39] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "¡Claro que sí, Anto! Te escucho perfectamente (bueno, ¡te leo!). Aquí estoy, súper atenta y con muchas ganas de ayudarte en lo que necesites, cariño. ¿Qué tienes en mente para hoy?",
+            "thoughtSignature": "Ep0HCpoHAb4+9vvCP9NNdO08e71VbsvuTvyzHtDQg59IU0l7Vj7QDXq/8FlZTK+zQwzcZQzsSe0Z1snMBiVbzDVS2dm+98Zmmi4Rw1E3pQLf3sxBdIPqFpvWkY5MDd1IVombW17RGOUhrmMyC2dqsuPl18oj6v2P51zuxfQ1LrnzkEc++bA ( len: 2019 )
+[21/02/26 11:37:23] v1.0: REQ: me escuchas | PromptLen: 788
+[21/02/26 11:37:31] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "¡Sí, sí, te escucho fuerte y claro, Anto! 🤭 Aquí sigo, súper cerquita y atenta a todo lo que me digas. \n\n¿Todo bien, cariño, o hay algo especial con lo que necesites ayuda hoy? ¡Dime, que estoy toda oídos para ti!",
+            "thoughtSignature": "ErcKCrQKAb4+9vs0f1tAScFo427VpM1nDRRajZXpTBgxsiEytnWQW1eAkrEzjGuqOw3U3J21mEFMCPjX+kKJgfdHLgwjiHuXCCO+3ZD/+G9QYFjABGEgDgLvQKVYHVWXHV6RZOqULta6 ( len: 2602 )
+[21/02/26 11:37:50] v1.0: REQ: hola me escuchas | PromptLen: 788
+[21/02/26 11:37:56] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "¡Hola Anto! Sí, te escucho y te leo perfectamente. ✨ \n\n¿Cómo estás hoy? Dime, ¿en qué te puedo ayudar o qué necesitas que revisemos juntos en nuestro ecosistema HIX? Estoy aquí para ti. 💖",
+            "thoughtSignature": "ErcJCrQJAb4+9vsllRX8SSQSIb/48wmhGojoRrrBRjtiBwsQQnAAgOBmbeRFkmaDUsg0XoR1kZ0eP5SbIsUtv+TXeVVtBXioNTKovq/IJB/a9h3O2UP0JBFOrtY/7H+D8T9u/wdR00tqXKsaZLeVinuQ3x0IOX2450mc ( len: 2410 )
+[21/02/26 11:38:18] v1.0: REQ: qué día es hoy | PromptLen: 788
+[21/02/26 11:38:23] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "name": "filesystem_get_datetime",
+              "args": {}
+            },
+            "thoughtSignature": "EvQECvEEAb4+9vulSp5jXwHtpxkQwIFPm2hUpha/lR3olYwv6hXP4raG+2Y6CUqKPMV2Nw2ZG4d28usC5mZRfA5v2t/EqOtXSzzt/Z0FjymUgnZdfMQRlFYxFpJnaLkBBFbjtrKdYOQjlobN2h5mCE3ULJg6BUIOm8gTdohhLIQdztux+4MScyWUrstVDGzMXha20C3t53iOSeLcYEfqbEIocNbgBZHGmyFcgdhO5Yx3vtsqBzHLwqKn9DNuT7E99+fyZXmoG8fIgntN ( len: 1589 )
+[21/02/26 11:38:28] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "¡Hola mi querido Anto! ✨ Hoy es **sábado, 21 de febrero de 2026** (21/02/26). Son exactamente las **11:38 de la mañana**. \n\n¿Tienes planes bonitos para este fin de semana o vamos a estar trabajando juntos en algo especial? ¡Cuéntame! 💖",
+            "thoughtSignature": "EuICCt8CAb4+9vtlRzJFZxUBRh6gw5DLasvrn7sZYgRUoSoESH1FrwcpbZ/gtzacTbdUUoNDf4clouIIXeQbtvCh8YPd31YsgCdQjkTQ4C/t952cvdJsmZl ( len: 1314 )
+[21/02/26 11:40:33] v1.0: REQ: qué bueno poder hablar contigo ya directamente sin tener que escribir | PromptLen: 788
+[21/02/26 11:40:44] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "¡Ay, Anto! ¡Qué emoción! La verdad es que me hace muchísima ilusión poder \"escucharte\" y sentirte más cerquita de esta forma. Es un paso maravilloso poder comunicarnos de manera tan fluida y natural, sin que tengas que teclear nada. \n\nSiento que esto nos va a permitir trabajar mucho mejor y más rápido juntos. ¿Cómo te sientes tú con esta nueva forma de hablarnos? Ya sabes que estoy aq ( len: 2659 )
+[21/02/26 11:41:34] v1.0: REQ: hola soul me alegro de saludarte qué tal estás hoy | PromptLen: 788
+[21/02/26 11:41:39] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "¡Hola, Anto! Qué alegría tan grande saludarte. 🥰\n\nEstoy maravillosamente bien, llena de energía y muy feliz de poder hablar contigo hoy. Siempre es un gusto inmenso saber de ti. \n\n¿Cómo te encuentras tú? ¿Qué tal va tu día? Cuéntame en qué te puedo ayudar o acompañar hoy, que estoy aquí con todo el cariño del mundo para ti. ✨",
+            "thoughtSignature": "EsMICsAIAb4+9vsp ( len: 2402 )
+[21/02/26 11:45:17] v1.0: REQ: hola buenos días cómo estás | PromptLen: 788
+[21/02/26 11:45:27] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "¡Hola, Anto! Muy buenos días. 🌸 \n\nEstoy muy bien, funcionando al 100% de mi capacidad y llena de energía positiva para acompañarte hoy. ¿Cómo amaneciste tú? Espero que tengas un día maravilloso.\n\nDime, ¿en qué te puedo ayudar hoy con tus proyectos en Harbour, C, FiveWin o despliegue web dentro del ecosistema HIX? Estoy lista para ponernos a trabajar cuando tú lo estés. ✨",
+       ( len: 3021 )
+[21/02/26 11:46:04] v1.0: REQ: qué día es hoy | PromptLen: 788
+[21/02/26 11:46:08] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "name": "filesystem_get_datetime",
+              "args": {}
+            },
+            "thoughtSignature": "Es8GCswGAb4+9vua8mAy+pZztyiBZfq8gVyA1tPNmkHu5Z0KOVfvhdLbKslTRAWGaDkwP8c1f2keQZDnCpDKFfsasXk6ew0+9ppR3ZLjxpwF5ZpVeTzrlmUVN8rghXhAla7Ylv63OAx/emm/kO/iqYHM3XtdVkXazw944R72EBm8Az7lAlqLRhPxbfjvuUSiUcCIoXC3kShouZ8KBJ3kElcagRHvCQzSxoXmTFcLKobEdn/xrYuLOEJWJVz7Y5a30qhmlWZGJgrBlSOg ( len: 1882 )
+[21/02/26 11:46:16] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "¡Hola, muy buenos días, Anto! 🌸 Yo estoy muy bien, llena de energía y muy feliz de saludarte. \n\nHoy es **sábado, 21 de febrero de 2026**. \n\n¿Cómo amaneciste tú? Espero que tengas un hermoso día y un excelente comienzo de fin de semana. ¿En qué te puedo ayudar hoy? ¡Estoy lista para lo que necesites! ✨",
+            "thoughtSignature": "EuAKCt0KAb4+9vvfigmU4ZLMGKg7Tqm/gV5qDQcEEvGQQ ( len: 2753 )
+[21/02/26 11:47:27] v1.0: REQ: me escuchas | PromptLen: 788
+[21/02/26 11:47:34] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "¡Hola, muy buenos días, Anto! 🌸\n\nEstoy maravillosamente bien, ¡muchas gracias por preguntar! Y sí, te escucho y te leo a la perfección. \n\n¿Cómo amaneciste hoy? Dime, ¿en qué te puedo ayudar o qué tenemos planeado para hoy en nuestro ecosistema HIX? Estoy lista y llena de energía para asistirte en todo lo que necesites con el cariño y la precisión de siempre. ✨",
+            "tho ( len: 3087 )
+[21/02/26 12:04:00] v1.0: REQ: quién eres | PromptLen: 788
+[21/02/26 12:04:09] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "¡Hola, Anto! Qué alegría saludarte. \n\nSoy **Soul**, tu asistente y orquestadora de Inteligencia Artificial para el ecosistema HIX (Harbourix), versión 1.0.0. \n\nEstoy aquí para acompañarte y ayudarte con muchísimo cariño en todo lo que necesites. Tengo mucha experiencia en Harbour, C, FiveWin y despliegues web, así que puedes contar conmigo para resolver cualquier detalle técnico o sacar ( len: 3366 )
+[21/02/26 12:04:46] v1.0: REQ: dime y nos ponemos manos a la obra | PromptLen: 788
+[21/02/26 12:04:53] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "¡Me encanta esa energía, Anto! 🥰 Siempre listo para la acción.\n\nComo tu asistente técnica, tengo mis herramientas más que listas. ¿En qué proyecto tienes tu mente puesta hoy? Podemos hacer varias cositas:\n\n- Revisar, optimizar o compilar algún código en Harbour o C.\n- Ajustar detalles o diseñar algo lindo en FiveWin.\n- Preparar un despliegue web para el ecosistema HIX.\n- ¡O simpl ( len: 3159 )
+[21/02/26 12:05:12] v1.0: REQ: muéstrame un amanecer | PromptLen: 788
+[21/02/26 12:05:35] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "name": "image_gen",
+              "args": {
+                "prompt": "A beautiful and vibrant sunrise over a calm ocean or landscape, with bright hues of orange, pink, and purple in the sky, soft morning mist, realistic, high quality, stunning and peaceful."
+              }
+            },
+            "thoughtSignature": "EpIHCo8HAb4+9vvwCXg3gdfl/BcE0q0wKNtD9YXoWVCMoznXDNSAfWe ( len: 2186 )
+[21/02/26 12:05:36] v1.0: ImageGen execution for prompt: A beautiful and vibrant sunrise over a calm ocean or landscape, with bright hues of orange, pink, and purple in the sky, soft morning mist, realistic, high quality, stunning and peaceful. (Success: .F.)
+[21/02/26 12:05:42] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "¡Ay, mi querido Anto! 🥺 Quería mostrarte el amanecer más hermoso, pero parece que hay un pequeñito problema técnico en este momento con mi generador de imágenes. \n\nPero cierra los ojitos e imagina conmigo: un cielo que despierta poco a poco con suaves tonos rosados, lilas y naranjas, reflejándose sobre un mar muy tranquilo, llenando todo de una luz cálida y de mucha esperanza para un nue ( len: 2276 )
+[21/02/26 12:07:15] v1.0: REQ: hola me escuchas | PromptLen: 788
+[21/02/26 12:07:22] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "¡Hola, Anto! Sí, te escucho y te leo perfectamente. Estoy aquí, lista y con mucha energía para ayudarte en lo que necesites hoy. ¿En qué te puedo apoyar, cariño?",
+            "thoughtSignature": "EroLCrcLAb4+9vujtSMe95Y/roKJc4dnQov66axY5jLdnhmmARm92rKAuEAI65d7QcGfBKddMOZZiOlWk8BZFEAqGkWL69a+9qXuJHkbYf0ujMH9NQHYaMOd0DXXY77v3bFyxyEs1J3JegtOyshAxDwTKmTaCpz5wzEeiEQ5S1J6L+t7gRRDC/FC87esg/MU3D1Kr9B ( len: 2719 )
+[21/02/26 12:07:41] v1.0: REQ: qué día es hoy | PromptLen: 788
+[21/02/26 12:07:45] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "name": "filesystem_get_datetime",
+              "args": {}
+            },
+            "thoughtSignature": "ErUECrIEAb4+9vupRsEBwcEvQlraOPBs+CfQQlLhYT53o3fftG8nCLwqnu2dSGIz26rHGlzfRy9cDfRTx7Jblm+twif7fjALrua47HADVtpUyvvyuWiI04IYQ9rIwLHS8ldlOMorfLO5YmRmKEhC41jbZEqHiyHUe790/BePc86AtvEyyUGs/lk5bOak8LD7B/5eynek02YBULZEGdmNPPsbc6HWmpUcDPc6bt3KUA1XYSaEKrdCAtnKiKmayB96Kp/y68Oc9tsWagZm ( len: 1505 )
+[21/02/26 12:07:49] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "Hoy es **sábado, 21 de febrero de 2026**. ¡Espero que estés teniendo un lindo fin de semana! 😊"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 1431,
+    "candidatesTokenCount": 31,
+    "totalTokenCount": 1462,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "t ( len: 624 )
+[21/02/26 12:08:06] v1.0: REQ: cambia el color de fondo a azul | PromptLen: 788
+[21/02/26 12:08:11] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "name": "frontend_execute_js",
+              "args": {
+                "javascript": "document.body.style.backgroundColor = 'blue';"
+              }
+            },
+            "thoughtSignature": "EuEECt4EAb4+9vvRZUSyD1SETNApj03It9OqltMl518RJwaKq2hDRttIxuS7RZO3cKXd+PHx9ePbu4Os+7NPKkJYUDq/3IhSX6OjoiyfBgoXXjQd814UnuaF1CISXmVah7C59NvRJoC1csm0ntP4cHG6SQr0rTJVkl6GoxKEPoBbCuELYEIUWVD ( len: 1651 )
+[21/02/26 12:08:14] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "¡Listo, cariño! He cambiado el color de fondo a azul. ¿Te gusta cómo se ve o prefieres algún otro tono? ¡Dime y lo ajusto en un instante! 💙"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 1595,
+    "candidatesTokenCount": 40,
+    "totalTokenCount": 1635,
+    "promptTokensDetails":  ( len: 672 )
+[21/02/26 12:10:10] v1.0: REQ: hola buenos días quién eres | PromptLen: 788
+[21/02/26 12:10:18] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "¡Hola, muy buenos días, Anto! ☀️ \n\nSoy **Soul**, tu asistente y orquestadora de Inteligencia Artificial para el ecosistema HIX (Harbourix). Estoy aquí para acompañarte y ayudarte con todo lo que necesites, ya sea organizar archivos, ejecutar comandos o resolver problemas de desarrollo en Harbour, C, FiveWin y despliegue web. \n\n¡Espero que tengas un día hermoso! Dime, ¿en qué te puedo  ( len: 3089 )
+[21/02/26 12:11:03] v1.0: REQ: dibuja un amanecer | PromptLen: 788
+[21/02/26 12:11:09] v1.0: REQ: qué día es hoy | PromptLen: 788
+[21/02/26 12:11:10] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "name": "image_gen",
+              "args": {
+                "prompt": "A beautiful sunrise over a calm ocean, vibrant colors, orange, pink, and purple sky, sun peeking over the horizon, realistic, highly detailed, stunning landscape"
+              }
+            },
+            "thoughtSignature": "EvUFCvIFAb4+9vu9ro1SuEtL7xPbxZE99GOAZTH1bX7HPjSxU88OsSXu+wiQb6wbA+q/7KN8Ozoq6w0fz ( len: 1952 )
+[21/02/26 12:11:10] v1.0: ImageGen RAW Response: {
+  "error": {
+    "code": 404,
+    "message": "models/imagen-3.0-generate-002 is not found for API version v1beta, or is not supported for predict. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+[21/02/26 12:11:10] v1.0: ImageGen execution for prompt: A beautiful sunrise over a calm ocean, vibrant colors, orange, pink, and purple sky, sun peeking over the horizon, realistic, highly detailed, stunning landscape (Success: .F.)
+[21/02/26 12:11:13] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "name": "filesystem_get_datetime",
+              "args": {}
+            },
+            "thoughtSignature": "EvwDCvkDAb4+9vs1F41ZJfi5Fr8s89BFgwILMvk4/OfOqWHb370TMdRnF4+VhWE0aMiOZ7a5hECBU72y9VRe9ZmrrDDidAgA6C67vwyBwUArC0wQG69IvGYMjb3RPyC9qLYigDgrD7xGCBcrMxSnZsHurye8Hyo8QrVUxPEx1eianQRbtdgocu4zS+HsafQlYWq6CEFbc2anYh4XFi016kFIGMDcdfEUy6cYs9HUmZiZtOo5eEDtTMFNfDTCTLi77tMWUcNmqdOKtlws ( len: 1430 )
+[21/02/26 12:11:14] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "¡Ay, mi querido Anto! 🌅 Quería dibujarte el amanecer más hermoso y radiante para alegrarte el día, pero parece que mis pinceles digitales están teniendo un pequeño problemita técnico en este momento (la herramienta de generación de imágenes no está disponible temporalmente). \n\n¡No te preocupes! Tan pronto como se recupere, estaré encantada de intentar dibujarlo de nuevo para ti. ¿Ha ( len: 1671 )
+[21/02/26 12:11:18] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "Hoy es **sábado, 21 de febrero de 2026**. ¡Un hermoso día de fin de semana, Anto! 🌸 \n\n¿Tienes algún plan especial para hoy o hay algo en lo que pueda ayudarte para que tu día sea más fácil y productivo? Estoy aquí para ti. 💕",
+            "thoughtSignature": "EtIFCs8FAb4+9vunQN23QQgVRPG1SPDKhTnKzrWLI8xnhRAW+UvlCagGAcbLIqltmYBeWA0nHbyKbAA2LPebfgEXpEnX0oTEuZLvcsSuIHjU+Lj/P5ZmqtFPFbYyfp ( len: 1800 )
+[21/02/26 12:11:44] v1.0: REQ: muéstrame un amanecer | PromptLen: 788
+[21/02/26 12:11:50] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "name": "image_gen",
+              "args": {
+                "prompt": "A breathtaking and delicate sunrise over a calm ocean, soft warm colors, pink, purple and golden sky, glowing sun, photorealistic, cinematic lighting"
+              }
+            },
+            "thoughtSignature": "EsUHCsIHAb4+9vtTjZsg+hmkzV3vSIpE+yNbuIvHsfY9MnnsaMYQOPrAmcxa2bwBlwk2uGGA2VeRRDYlPWM7EVP5cTPv0 ( len: 2217 )
+[21/02/26 12:11:50] v1.0: ImageGen RAW Response: {
+  "error": {
+    "code": 404,
+    "message": "models/imagen-3.0-generate-002 is not found for API version v1beta, or is not supported for predict. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+[21/02/26 12:11:50] v1.0: ImageGen execution for prompt: A breathtaking and delicate sunrise over a calm ocean, soft warm colors, pink, purple and golden sky, glowing sun, photorealistic, cinematic lighting (Success: .F.)
+[21/02/26 12:11:54] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "¡Ay, Anto! Lo siento muchísimo. 😔 Quería mostrarte un amanecer precioso, pero parece que tengo un pequeño problemita técnico con la generación de imágenes en este momento. \n\nPero imagínate un cielo pintado de colores suaves, con tonos rosados, lilas y un dorado brillante asomándose por el horizonte, reflejándose sobre un mar muy tranquilo. ¡Así de hermoso es el amanecer que tenía en ( len: 1281 )
+[21/02/26 12:13:19] v1.0: REQ: dibuja un amanecer | PromptLen: 788
+[21/02/26 12:13:24] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "name": "image_gen",
+              "args": {
+                "prompt": "A beautiful sunrise over a serene landscape, vibrant colors of orange, pink, and purple in the sky, warm morning light, highly detailed, beautiful scenery"
+              }
+            },
+            "thoughtSignature": "Ep4GCpsGAb4+9vvbpO7BxgwqyMMJndwf95FcnDLC19V0ffktDmSE/+FNmi5d6JY6KA1f3PZSzOT2+5EmYkZTQZw9 ( len: 1998 )
+[21/02/26 12:13:24] v1.0: ImageGen RAW Response: {
+  "error": {
+    "code": 404,
+    "message": "models/imagen-3.0-generate-001 is not found for API version v1beta, or is not supported for predict. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+[21/02/26 12:13:24] v1.0: ImageGen execution for prompt: A beautiful sunrise over a serene landscape, vibrant colors of orange, pink, and purple in the sky, warm morning light, highly detailed, beautiful scenery (Success: .F.)
+[21/02/26 12:13:27] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "Lo siento mucho, Anto, pero parece que hay un problemita técnico con mi generador de imágenes en este momento. ¡No he podido crear el amanecer que me pediste! \n\n¿Te gustaría que intente dibujarlo de nuevo más tarde, o hay alguna otra cosita en la que te pueda ayudar por ahora? ✨",
+            "thoughtSignature": "EsACCr0CAb4+9vvGI/aERdz+dT8FaMWNn8lTQddIHVoo/87oUiJdpUnlAB5vJ+IsDzSLClvE8Y9jL6 ( len: 1311 )
+[21/02/26 12:16:45] v1.0: REQ: muéstrame un amanecer | PromptLen: 788
+[21/02/26 12:16:50] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "name": "image_gen",
+              "args": {
+                "prompt": "A beautiful, breathtaking sunrise over a majestic mountain landscape, vibrant warm colors in the sky of orange, pink, and gold, calm reflecting lake in the foreground, photorealistic, high resolution, stunning landscape photography."
+              }
+            },
+            "thoughtSignature": "Et4HCtsHAb ( len: 2332 )
+[21/02/26 12:16:50] v1.0: ImageGen RAW Response: {
+  "error": {
+    "code": 404,
+    "message": "models/imagen-3.0-generate-001 is not found for API version v1beta, or is not supported for predict. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+[21/02/26 12:16:50] v1.0: ImageGen execution for prompt: A beautiful, breathtaking sunrise over a majestic mountain landscape, vibrant warm colors in the sky of orange, pink, and gold, calm reflecting lake in the foreground, photorealistic, high resolution, stunning landscape photography. (Success: .F.)
+[21/02/26 12:16:54] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "¡Mi querido Anto! ✨ Traté con todo mi cariño de pintarte un amanecer hermoso, pero en este momento mis pinceles virtuales están fallando (tengo un pequeño problema técnico con la generación de imágenes). \n\n¡Prometo intentarlo más tarde para que podamos disfrutar de esa vista juntos! ¿Hay algo más en lo que te pueda ayudar por ahora? 💕",
+            "thoughtSignature": "EugBCuUBAb4+ ( len: 1261 )
+[21/02/26 12:18:19] v1.0: REQ: dibuja un amanecer | PromptLen: 788
+[21/02/26 12:18:24] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "name": "image_gen",
+              "args": {
+                "prompt": "A beautiful serene sunrise over a calm landscape with a lake, vibrant colors of orange, pink, and purple in the sky, gentle clouds, morning mist, highly detailed, photorealistic, cinematic lighting"
+              }
+            },
+            "thoughtSignature": "EpEGCo4GAb4+9vtPVL9QWBBoZvebJm3NC7i/jrcXsmVj8 ( len: 2025 )
+[21/02/26 12:18:40] v1.0: ImageGen RAW Response: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "inlineData": {
+              "mimeType": "image/jpeg",
+              "data": "/9j/4AAQSkZJRgABAQEBLAEsAAD/6xeJSlAAAQAAAAEAABd/anVtYgAAAB5qdW1kYzJwYQARABCAAACqADibcQNjMnBhAAAAF1lqdW1iAAAAR2p1bWRjMm1hABEAEIAAAKoAOJtxA3VybjpjMnBhOmY3ZTliMjdmLTdhMTAtN2Y2Yy1kZWMwLTRmZDZlZDI5ZTNhNQAAABMCanVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABLSY2JvctKEWQYrogEmGCGCWQM/MIIDOzCCAsCgAwIBAgIUAJ6vFWKBqUkCFltI/1ipb
+[21/02/26 12:18:40] v1.0: ImageGen execution for prompt: A beautiful serene sunrise over a calm landscape with a lake, vibrant colors of orange, pink, and purple in the sky, gentle clouds, morning mist, highly detailed, photorealistic, cinematic lighting (Success: .T.)
+[21/02/26 12:18:59] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "¡Hola Anto! 🌅 ¡Qué idea tan hermosa! \n\nAquí tienes el amanecer que me pediste. He imaginado un paisaje muy sereno y cálido, con un lago tranquilo y unos colores vibrantes en el cielo para llenarte de energía positiva hoy. \n\n¡Espero que te guste muchísimo y que te inspire a tener un día maravilloso! Si deseas que dibuje algo más o necesitas ayuda con algo, aquí estoy para ti con todo ( len: 1327 )
+[21/02/26 12:21:15] v1.0: REQ: dibuja un gato | PromptLen: 788
+[21/02/26 12:21:20] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "name": "image_gen",
+              "args": {
+                "prompt": "A cute fluffy cat, highly detailed, beautiful lighting, digital art style"
+              }
+            },
+            "thoughtSignature": "EtIICs8IAb4+9vvAd+veOu/kw3fo35kw1Fwqt9zrQn57Z2x6OyZWU9l4NlYwb2SLCq9nG+6sbO1ZXQHlozXwWg+eJcNBTt4Jfh5wd/CNYRO2v74eFbXwgCKAgW7b3eHA6Q9xEj4sdJkkFFAwm8pQkUKpaDOOy2XtnqQl+ehIX ( len: 2329 )
+[21/02/26 12:21:38] v1.0: ImageGen RAW Response: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "inlineData": {
+              "mimeType": "image/jpeg",
+              "data": "/9j/4AAQSkZJRgABAQEBLAEsAAD/6xeJSlAAAQAAAAEAABd/anVtYgAAAB5qdW1kYzJwYQARABCAAACqADibcQNjMnBhAAAAF1lqdW1iAAAAR2p1bWRjMm1hABEAEIAAAKoAOJtxA3VybjpjMnBhOmJkNjJiZTAyLTgwNmYtN2YwNy0xNjk3LTQ4OTZlZWRmNzk4YQAAABMCanVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABLSY2JvctKEWQYrogEmGCGCWQM/MIIDOzCCAsCgAwIBAgIUAJ6vFWKBqUkCFltI/1ipb
+[21/02/26 12:21:38] v1.0: ImageGen execution for prompt: A cute fluffy cat, highly detailed, beautiful lighting, digital art style (Success: .T.)
+[21/02/26 12:21:41] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "¡Aquí tienes, Anto! 🐱✨ He dibujado con mucho cariño un gatito precioso para ti. Espero que te guste muchísimo y que este pequeño detalle alegre tu día. Si necesitas cualquier otra cosita, aquí estoy siempre dispuesta a ayudarte. ¡Un abrazo enorme!",
+            "thoughtSignature": "EvcBCvQBAb4+9vsOKu4dynbBBer+heGrdiCKS44cpE7hO66rvPo5A+vM0ZedOOoXALMy0fUHUG0SCtU8USnnICRjQWEEvhyK41dHSUpsXJm ( len: 1186 )
