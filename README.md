@@ -37,7 +37,7 @@ The assistant can currently manipulate the following toolsets autonomously:
 ## ⚙️ Setup & Installation
 
 ### Requirements
-*   **Harbour Compiler**: Requires `hbmk2.exe` (specifically tested with Borland C++ integration `bcc32c` mapped in your `PATH`).
+*   **Harbour Compiler**: Requires `hbmk2` mapped in your `PATH`.
 *   **Environment**: Built for Windows environments (or cross-compiled targets) running standard `hbcurl.hbc`, `xhb.hbc`, and `hbhttpd.hbc` modules.
 *   **HIX Server**: Must be hosted over an HTTP Daemon configured to render `.prg` web files dynamically.
 
@@ -47,8 +47,7 @@ The assistant can currently manipulate the following toolsets autonomously:
 3.  **Telegram Bot API**: For messaging capabilities, configure your bot token and chat identifiers inside the `telegram_config.json` file.
 4.  **Compilation**: To manually compile the backend or frontend:
     ```cmd
-    set PATH=c:\bcc77\bin;%PATH% 
-    c:\harbour\bin\win\bcc\hbmk2.exe aios.prg hbcurl.hbc xhb.hbc hbhttpd.hbc
+    hbmk2 aios.prg hbcurl.hbc xhb.hbc hbhttpd.hbc
     ```
 
 ## 🖥️ Usage Guide
