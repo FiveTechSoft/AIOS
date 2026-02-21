@@ -1,4 +1,4 @@
-# OpenClaw - Changelog and History of Changes
+# AIOS - Changelog and History of Changes
 
 ## 2026-02-21
 
@@ -11,6 +11,12 @@
     responses in `chat.prg` using the native browser `SpeechSynthesis` API.
     Included a mute/unmute toggle switch (🔊) and a dropdown selector to choose
     between different Spanish voices available in the operating system.
+
+*   **AI Image Generation**: Introduced a new `image_gen` backend skill using
+    the Pollinations AI engine (Stable Diffusion). The AI can now generate fast,
+    free images based on text prompts and return them via standard Markdown tags,
+    which the `chat.prg` frontend now properly captures and renders as native
+    responsive `<img>` elements.
 
 ## 2026-02-20
 
