@@ -13,8 +13,8 @@
     between different Spanish voices available in the operating system.
 
 *   **AI Image Generation**: Introduced a new `image_gen` backend skill using
-    the Pollinations AI engine (Stable Diffusion). The AI can now generate fast,
-    free images based on text prompts and return them via standard Markdown tags,
+    the Gemini Imagen 3 API. The AI can now generate high-quality images 
+    based on text prompts and return them as base64-encoded Markdown tags,
     which the `chat.prg` frontend now properly captures and renders as native
     responsive `<img>` elements.
 
