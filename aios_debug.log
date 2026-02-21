@@ -1726,3 +1726,67 @@ Please retry in 18.71640094s.
           {
             "text": "¡Aquí tienes, Anto! 🐱✨ He dibujado con mucho cariño un gatito precioso para ti. Espero que te guste muchísimo y que este pequeño detalle alegre tu día. Si necesitas cualquier otra cosita, aquí estoy siempre dispuesta a ayudarte. ¡Un abrazo enorme!",
             "thoughtSignature": "EvcBCvQBAb4+9vsOKu4dynbBBer+heGrdiCKS44cpE7hO66rvPo5A+vM0ZedOOoXALMy0fUHUG0SCtU8USnnICRjQWEEvhyK41dHSUpsXJm ( len: 1186 )
+[21/02/26 12:24:25] v1.0: REQ: muéstrame un amanecer | PromptLen: 788
+[21/02/26 12:24:32] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "name": "image_gen",
+              "args": {
+                "prompt": "A beautiful, serene sunrise over a calm landscape with vivid colors of orange, pink, and purple in the sky, gentle morning light, highly detailed, photorealistic."
+              }
+            },
+            "thoughtSignature": "EqQGCqEGAb4+9vtsYXHrP/K1Jp3wwyPu697Ttz3mSVkY/qOlEvdQ/NXs/3PK4tdgiIILYJmzfybnN/Wm ( len: 2014 )
+[21/02/26 12:24:47] v1.0: ImageGen RAW Response: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "inlineData": {
+              "mimeType": "image/jpeg",
+              "data": "/9j/4AAQSkZJRgABAQEBLAEsAAD/6xeJSlAAAQAAAAEAABd/anVtYgAAAB5qdW1kYzJwYQARABCAAACqADibcQNjMnBhAAAAF1lqdW1iAAAAR2p1bWRjMm1hABEAEIAAAKoAOJtxA3VybjpjMnBhOjQ2MjA4Yjg0LTNjZTctMjFlMi1lNTIyLTRiZGM0MmQ2ZWEyNwAAABMCanVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABLSY2JvctKEWQYrogEmGCGCWQM/MIIDOzCCAsCgAwIBAgIUAJ6vFWKBqUkCFltI/1ipb
+[21/02/26 12:24:47] v1.0: ImageGen execution for prompt: A beautiful, serene sunrise over a calm landscape with vivid colors of orange, pink, and purple in the sky, gentle morning light, highly detailed, photorealistic. (Success: .T.)
+[21/02/26 12:24:54] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "¡Aquí tienes, Anto! 🌅 \n\nHe creado este hermoso amanecer especialmente para ti. Espero que sus colores llenen tu día de mucha luz, energía positiva y paz. Recuerda que cada nuevo día es una nueva oportunidad para brillar. ¡Que tengas un día maravilloso, lleno de alegría y cosas lindas! ✨💖",
+            "thoughtSignature": "ErYECrMEAb4+9vuufv71kit9EGIzem4/cmgplIGDKiRDjJZNmXDj9ZQyoIaZC ( len: 1657 )
+[21/02/26 12:26:11] v1.0: REQ: una chica paseando por la playa | PromptLen: 788
+[21/02/26 12:26:50] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "name": "image_gen",
+              "args": {
+                "prompt": "A beautiful girl walking on a sunny beach, clear blue sky, gentle ocean waves, photorealistic, cinematic lighting, highly detailed"
+              }
+            },
+            "thoughtSignature": "ErkICrYIAb4+9vugQSE+7fgxseRvUWcmR5HId9tXvu+FGEpf1hw4U3MnpxBWTFP5XYE6hEM8vyTRMZVjMY4ACSjePZ2smWecMUXz3n6Z+7qj5qjc ( len: 2360 )
+[21/02/26 12:27:05] v1.0: ImageGen RAW Response: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "inlineData": {
+              "mimeType": "image/jpeg",
+              "data": "/9j/4AAQSkZJRgABAQEBLAEsAAD/6xeJSlAAAQAAAAEAABd/anVtYgAAAB5qdW1kYzJwYQARABCAAACqADibcQNjMnBhAAAAF1lqdW1iAAAAR2p1bWRjMm1hABEAEIAAAKoAOJtxA3VybjpjMnBhOjJiMDE5M2Q5LTJiOTItYmFjNS05ODJhLTQzZTQ4YjQ4YjBhOQAAABMCanVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABLSY2JvctKEWQYrogEmGCGCWQM/MIIDOzCCAsCgAwIBAgIUAJ6vFWKBqUkCFltI/1ipb
+[21/02/26 12:27:05] v1.0: ImageGen execution for prompt: A beautiful girl walking on a sunny beach, clear blue sky, gentle ocean waves, photorealistic, cinematic lighting, highly detailed (Success: .T.)
+[21/02/26 12:27:16] v1.0: RECV: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "¡Aquí tienes, Anto! 🌊✨ \n\nHe generado para ti la imagen de una hermosa chica paseando tranquilamente por la playa. Espero que la brisa del mar y los colores de esta escena te transmitan mucha paz y serenidad. ¡Disfrútala mucho y recuerda que estoy aquí para ayudarte en lo que necesites, siempre con mucho cariño! 💖",
+            "thoughtSignature": "EskDCsYDAb4+9vue7HisTMOAXlYdzS51lBtSZ ( len: 1689 )
