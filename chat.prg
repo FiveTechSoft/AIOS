@@ -112,7 +112,7 @@ function main()
    cHtml += "        var div = document.createElement( 'div' );"
    cHtml += "        div.className = 'message ' + role;"
    cHtml += "        var formatted = text.replace( /&/g, '&amp;' ).replace( /</g, '&lt;' ).replace( />/g, '&gt;' );"
-   cHtml += "        formatted = formatted.replace( /!" + Chr( 92 ) + "[(.*?)" + Chr( 92 ) + "]" + Chr( 92 ) + "((.*?)" + Chr( 92 ) + ")/g, '<img src=\"$2\" alt=\"$1\" />');"
+   cHtml += "        formatted = formatted.replace( /!" + Chr( 92 ) + "[(.*?)" + Chr( 92 ) + "]" + Chr( 92 ) + "((.*?)" + Chr( 92 ) + ")/g, '<img src=' + String.fromCharCode(34) + '$2' + String.fromCharCode(34) + ' alt=' + String.fromCharCode(34) + '$1' + String.fromCharCode(34) + ' />');"
    cHtml += "        formatted = formatted.split( '\\r\\n' ).join( '<br>' );"
    cHtml += "        formatted = formatted.split( '\\n' ).join( '<br>' );"
    cHtml += "        div.innerHTML = formatted;"
