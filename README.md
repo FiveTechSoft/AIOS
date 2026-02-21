@@ -5,7 +5,7 @@ AIOS is an experimental and highly robust AI Assistant platform natively built i
 
 ## 🚀 Key Features
 
-*   **Native Harbour Architecture**: Ultra-stable system integration using `hbcurl` and `hbhttpd` for fast, lightweight background processes and web interfacing.
+*   **Native Harbour Architecture**: Ultra-stable system integration using `hbcurl` for fast, lightweight background processes and web interfacing.
 *   **Gemini Function Calling (FC)**: Instead of just returning text, the AI understands when to trigger specialized scripts (e.g., FileSystem operations, sending Telegram messages, or Web Searches).
 *   **Web Speech Integration**: Full support for native browser `SpeechRecognition` to talk to the AI, and `SpeechSynthesis` (TTS) to hear its responses aloud natively.
 *   **Multi-Modal AI Image Generation**: Integrated with Gemini Imagen API to generate rich, high-quality images directly into the chat stream via `image_gen.prg`.
