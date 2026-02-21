@@ -37,17 +37,12 @@ The assistant can currently manipulate the following toolsets autonomously:
 ## ⚙️ Setup & Installation
 
 ### Requirements
-*   **Harbour Compiler**: Requires `hbmk2` mapped in your `PATH`.
 *   **Environment**: Built for Windows environments (or cross-compiled targets) running standard `hbcurl.hbc`, `xhb.hbc`, and `hbhttpd.hbc` modules.
 
 ### Configuration
 1.  **Gemini API Key**: You must provide a valid Gemini API Key. The core looks for the `GEMINI_API_KEY` system environment variable, or alternatively, a fallback `api_key` string inside `gemini_config.json`.
 2.  **Web Search API**: For live Web Search capabilities, you must provide your Serper.dev API key inside the `serper_config.json` file.
 3.  **Telegram Bot API**: For messaging capabilities, configure your bot token and chat identifiers inside the `telegram_config.json` file.
-4.  **Compilation**: To manually compile the backend or frontend:
-    ```cmd
-    hbmk2 aios.prg hbcurl.hbc xhb.hbc hbhttpd.hbc
-    ```
 
 ## 🖥️ Usage Guide
 
