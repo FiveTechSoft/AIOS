@@ -69,3 +69,6 @@ Whenever you use parentheses `( )`, you **MUST** leave exactly one space after t
 
 ## 10. Comments Language
 All code comments within `.prg` files MUST be strictly written in English. Do not write comments in Spanish or any other language.
+
+## 11. Local Variables Declaration (CRITICAL)
+In Harbour, all `local` variables MUST be declared at the very beginning of a `function` or `procedure`, before any executable code or assignments. You cannot interleave `local` declarations with executable statements.
