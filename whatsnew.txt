@@ -1,5 +1,20 @@
 # AIOS - Changelog and History of Changes
 
+## 2026-02-22
+
+*   **Strict Two-Stage Routing**: Refactored `aios.prg` to include a pre-flight evaluation step. 
+    The AI now explicitly asks Gemini if a prompt requires a step-by-step plan ("¿Puedes descomponer esta petición...?").
+    If the answer is "SI", the AI is forbidden from answering in the chat and is forced to 
+    silently invoke the `ui_plan_tasks` tool to generate a detailed action list.
+
+*   **Task List Sidebar Rendering**: Rebuilt the Task Planner display in `chat.prg`/`chat_script.js`.
+    The UI has been simplified to display only checkable checkboxes and bolded titles, 
+    omitting the colored borders and hourglass icons to maintain a professional workspace feel.
+    The tasks generated are no longer repeated in the chat interface.
+
+*   **TTS Initialization**: Overrode the Text-to-Speech logic to automatically 
+    pick the last Spanish voice available in the system's voice list as the default option.
+
 ## 2026-02-21
 
 *   **Chat Hamburger Menu**: Implemented a slide-out sidebar menu in `chat.prg` 
@@ -113,3 +128,25 @@
 *   **Web Scheduled Reminders**: Refactored `cron_add_reminder` to bypass
     background Telegram threads and utilize native browser timeout evaluation
     when the `chat_id` parameter resolves to empty or "web".
+
+## 2026-02-22
+
+*   **Frontend Javascript Refactoring**: Completely decoupled the massive
+    inline Javascript execution payload from the `chat.prg` Harbour builder
+    by extracting it into a dedicated `chat_script.js` resource file.
+    *   **Syntax Bug Fix**: Eliminated persistent browser string-escaping
+        syntax errors (`SyntaxError: Unexpected string`) caused by Harbour
+        concatenation conflicts with modern HTML/JS characters (e.g. `&apos;`).
+    *   **Architecture**: Modified `chat.prg` to simply invoke `hb_MemoRead()`
+        to load the Javascript at runtime, massively simplifying the source
+        code and allowing for direct IDE Javascript validation.
+    *   **Feature Verification**: Confirmed the Send Button, Enter Key submission,
+        and dynamically updated multi-step sidebar plans execute reliably
+        after the refactor.
+    *   **Contextual Dropdown Menus**: Replaced the native browser alert `confirm()` 
+        dialogs with a custom styled HTML context-menu dropdown on the sidebar's 
+        vertical three dots settings icon, yielding a cleaner and less intrusive UX.
+    *   **Proactive Task Planning**: Refactored the backend `aios.prg` system 
+        prompt to instruct the AI to proactively generate step-by-step Planner 
+        tasks in the sidebar *before* executing complex instructions, while 
+        ignoring simple conversational prompts.
