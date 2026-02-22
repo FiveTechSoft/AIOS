@@ -2,6 +2,11 @@
 
 ## 2026-02-21
 
+*   **Chat Hamburger Menu**: Implemented a slide-out sidebar menu in `chat.prg` 
+    that structurally organizes the AIOS features into Agentic Phases 
+    (Planning, Execution, Synthesis) with specific tool descriptions and 
+    associated DNA badges (e.g. OpenClaw, Devin, Agent Zero).
+
 *   **Web Speech API Integration**: Added vocal interaction capabilities to
     `chat.prg` using the native browser `SpeechRecognition` API. Users can now
     click a microphone icon to transcribe spoken Spanish directly into the chat
