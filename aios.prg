@@ -387,7 +387,12 @@ function ParseAiosFCResponse( cJSON )
    nErr := hb_jsonDecode( cW, @hResponse )
    if ( nErr == 0 .or. nErr == Len( cW ) ) .and. ValType( hResponse ) == "H"
    if hb_HHasKey( hResponse, "candidates" ) .and. Len( hResponse["candidates"] ) > 0
+   if ValType( hResponse["candidates"][1] ) == "H" .and. hb_HHasKey( hResponse["candidates"][1], "content" ) .and. ValType( hResponse["candidates"][1]["content"] ) == "H" .and. hb_HHasKey( hResponse["candidates"][1]["content"], "parts" )
    aParts := hResponse["candidates"][1]["content"]["parts"]
+   else
+   aParts := {}
+   endif
+   
    hResult["success"] := .t.
    hResult["raw_parts"] := aParts
    lHasFC := .f.
@@ -457,6 +462,7 @@ function BuildAiosFunctions()
    aAdd( aFuncs, { "name" => "frontend_clear_intervals", "description" => "Stop recurrent UI tasks.", "parameters" => { "type" => "object", "properties" => {=>}, "required" => {} } } )
    aAdd( aFuncs, { "name" => "frontend_execute_js", "description" => "Execute JS on browser.", "parameters" => { "type" => "object", "properties" => { "javascript" => { "type" => "string" } }, "required" => {"javascript"} } } )
    aAdd( aFuncs, { "name" => "image_gen", "description" => "Generates an image via AI.", "parameters" => { "type" => "object", "properties" => { "prompt" => { "type" => "string" } }, "required" => {"prompt"} } } )
+   aAdd( aFuncs, { "name" => "ui_plan_tasks", "description" => "Exclusivo para el Agente (AIOS). Úsalo CADA VEZ que el usuario te asigne un problema de código, solicitud de cambio o refactorización. Genera un plan de acción y lo muestra en la UI.", "parameters" => { "type" => "object", "properties" => { "plan_id" => { "type" => "string", "description" => "Unique ID for this plan to update it later, e.g. 'plan-123'" }, "tasks" => { "type" => "array", "description" => "A list of tasks tracking the execution plan.", "items" => { "type" => "object", "properties" => { "name" => { "type" => "string", "description" => "Short name for the task" }, "description" => { "type" => "string", "description" => "Short explanation of the task objective." }, "status" => { "type" => "string", "enum" => {"pending", "in-progress", "completed", "error"}, "description" => "Current status of the task." }, "steps" => { "type" => "array", "description" => "Sub-steps inside this task", "items" => { "type" => "object", "properties" => { "name" => { "type" => "string" }, "status" => { "type" => "string", "enum" => {"pending", "completed"} } }, "required" => {"name", "status"} } } }, "required" => {"name", "description", "status"} } } }, "required" => {"plan_id", "tasks"} } } )
 
 return aFuncs
 

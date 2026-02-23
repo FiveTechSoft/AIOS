@@ -1,5 +1,13 @@
 # AIOS - Changelog and History of Changes
 
+## 2026-02-23
+
+*   **Task Plan Schema Fix**: Added the complete JSON schema for `ui_plan_tasks` to `BuildAiosFunctions` in `aios.prg`. This ensures Gemini strictly formats the `tasks` array with `name` and `description` parameters, fixing the issue where sidebar action plans appeared as "Sin Título: Sin descripción".
+
+*   **UI Sidebar Cleanup**: Removed the colored `border-left` styling from tasks and conversation list items within the left sidebar in `chat.prg` and `chat_script.js` to create a more minimalist aesthetic.
+
+*   **Dynamic Task Counter**: Fixed a bug where the "pending" tasks counter did not decrement when a conversation or task plan was deleted from the sidebar history. A dedicated recounting JavaScript function was added to dynamically parse remaining checkboxes after deletion.
+
 ## 2026-02-22
 
 *   **Strict Two-Stage Routing**: Refactored `aios.prg` to include a pre-flight evaluation step. 
